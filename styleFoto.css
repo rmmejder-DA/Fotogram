@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #071820;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: 'comic neue';
+  src: url('Comic_Neue/ComicNeue-Bold.ttf') format('truetype');
+}
+
+/*myDialog*/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+header button {
+  display: contents;
+  font-size: 24px;
+}
+
+h2 {
+  color: white;
+  font-family: 'comic neue', sans-serif;
+  font-size: 36px;
+}
+
+dialog {
+  position: fixed;
+  border-radius: 25px;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  margin: auto;
+}
+
+dialog::backdrop {
+  background-color: #0a222c;
+  opacity: 0.9;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  color: mediumseagreen;
+}
+
+button:focus {
+  outline-offset: 0;
+  outline: none;
+}
+
+footer button {
+  display: flex;
+  border: none;
+  padding: 10px;
+  background-color: transparent;
+  font-size: 42px;
+  appearance: none;
+  color: white;
+}
+
+
+/*Site*/
+@media (max-width:1024px) {
+h1.mypic {
+  font-size: 60px;
+}
+.imgSite img{
+  width: 150px;
+  height: 150px;
+}
+}
+.header_site {
+  background-color: #0a222c;
+  height: 120px;
+  padding-left: 15px;
+}
+
+.mypic {
+  font-family: 'comic neue', sans-serif;
+  text-align: center;
+  font-size: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 64px;
+}
+
+.LOGO {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.flex_box {
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+img {
+  border-radius: 20px;
+  width: 700px;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+span {
+  padding-right: 200px;
+  padding-left: 200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+span img {
+  width: 150px;
+  height: 150px;
+  object-position: center;
+  object-fit: cover;
+}
+
+span img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.9);
+}
+
+/*footer*/
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.img_footer {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.site_footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #0a222c;
+  text-align: center;
+  padding: 10px 0;
+  /* font-size: 18px; */
+}
