@@ -1,11 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
 body {
+  height: 100%;
   background-color: #071820;
-  height: 100vh;
 }
 
 @font-face {
@@ -70,15 +77,38 @@ footer button {
 
 
 /*Site*/
-@media (max-width:1024px) {
-h1.mypic {
-  font-size: 60px;
+@media (max-width:1410px) {
+  .spanimg {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  h1.mypic {
+    font-size: 80px;
+    margin: 32px;
+  }
 }
-.imgSite img{
-  width: 150px;
-  height: 150px;
+
+@media (max-width:1072px) {
+  h1.mypic {
+    font-size: 60px;
+    margin: 24px;
+  }
+
+  .spanimg img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .spanimg {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .site-content {
+    margin-top: 200px;
+  }
 }
-}
+
 .header_site {
   background-color: #0a222c;
   height: 120px;
@@ -92,20 +122,14 @@ h1.mypic {
   font-weight: 400;
   color: #ffffff;
   margin-bottom: 64px;
+  margin-top: 64px;
 }
 
 .LOGO {
-  width: 30%;
+  width: 385px;
   height: auto;
   object-fit: cover;
   object-position: center;
-}
-
-.flex_box {
-  height: max-content;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
 }
 
 img {
