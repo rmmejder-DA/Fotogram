@@ -6,7 +6,8 @@
 html,
 main,
 body {
-  height: 89%;
+  width: auto;
+  height: 100%;
   background-color: #071820;
 }
 
@@ -87,9 +88,7 @@ footer button {
     font-size: 80px;
     margin: 32px;
   }
-  .main{
-  height: 92%;
-}
+
 }
 
 @media (max-width:1072px) {
@@ -111,18 +110,14 @@ footer button {
   .site-content {
     display: contents;
   }
-  .main{
-  height: 92%;
-}
+
 }
 
 @media (max-width:845px) {
   img.LOGO {
     padding-left: 24px;
   }
-.main{
-  height: 97%;
-}
+
   h1.mypic {
     font-size: 40px;
     margin-bottom: 64px;
@@ -145,24 +140,18 @@ footer button {
 }
 
 @media (max-width:670px) {
+
   .site-content {
+    margin-top: 80px;
     padding: 0;
   }
-.main{
-  height: 86%;
 }
-
-.site-content {
-  margin-top: 80px;
-}}
 
 @media (max-width:500px) {
   .site-content {
     margin-top: 28px;
   }
-.main{
-  height: 93%;
-}
+
   h1.mypic {
     font-size: 32px;
     margin-bottom: 32px;
@@ -222,6 +211,10 @@ span img:hover {
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.9);
 }
 
+footer {
+    display: flex;
+    justify-content:space-evenly;
+}
 
 .img_footer {
   width: 75px;
