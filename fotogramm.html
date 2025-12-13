@@ -9,45 +9,57 @@
 </head>
 
 <body onload="render(img)">
-
-        <header class="header_site">
+    <header class="header_site">
+        <div class="logo_container">
             <img class="LOGO" src="logo/Fotogram_Logo.svg" alt="LOGO">
-        </header>
-            <main>
-            <div class="site-content">
-                <h1 class="mypic">Mein Persönliches Fotoalbum</h1>
-                <span class="spanimg">
-                    <img onclick="renderFiltered(1); openDialog();"src="./cat/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG" alt="Katzen">
-                    <img onclick="renderFiltered(2); openDialog();" src="./fotos/animal-7790230_640.jpg" alt="Natural">
-                    <img onclick="renderFiltered(3); openDialog();" src="./sportauto/sport-4155825_1920.jpg" alt="Sportauto">
-                    <img onclick="renderFiltered(4); openDialog();"src="Advent/advent-1883840_1280.jpg" alt="Advent">
-                    <img onclick="renderFiltered(5); openDialog();" src="./Eagle/bald-eagles-8493350_1280.jpg" alt="Eagle">
-                    <img onclick="renderFiltered(6); openDialog();" src="./Fuerteventura/landscape-4904760_1280.jpg" alt="Fuerteventura">                    
-                    <img onclick="renderFiltered(7); openDialog();"src="./Hunde/animals-7862112_1280.jpg" alt="Hunde">
-                    <img onclick="renderFiltered(8); openDialog();" src="Internet/apps-426559_1280.jpg" alt="Internet">
-                    <img onclick="renderFiltered(9); openDialog();" src="MarryChristmas/ai-generated-8438102_1280.jpg" alt="Merry Christmas">                    
-                    <img onclick="renderFiltered(10); openDialog();"src="Programmieren/brain-744207_1280.jpg" alt="Programmieren">
-                    <img onclick="renderFiltered(11); openDialog();" src="Regenbogen/mountains-9553822_1280.png" alt="Regenbogen">
-                    <img onclick="renderFiltered(12); openDialog();" src="Winter/christmas-wallpaper-636634_1280.jpg" alt="Winter">                    
-                </span>
-            </div>
-        <dialog id="myDialog" closedby="any">
-            <header>
-                <h2 id="alt-info"></h2>
-                <button onclick="closeDialog()">&#10060;</button>
-            </header>
-            <section>
-                <div id="content"></div>
-                <div>
-                    <img class="dialogImage" id="dialogImage" src="" alt="" >
-                </div>
-            </section>
-            <footer class="dialogFoot">
-                <button id="prevButton">&#x21E6;</button>
-                <button id="nextButton">&#x21E8;</button>
-            </footer>
-        </dialog>
+        </div>
+    </header>
+    <main class="page-content">
+        <div class="site-content">
+            <h1 class="mypic">Mein Persönliches Fotoalbum</h1>
+            <span class="spanimg">
+                <img onclick="renderFiltered(1); openDialog();" src="./cat/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG"
+                    alt="Katzen">
+                <img onclick="renderFiltered(2); openDialog();" src="./Natural/animal-7790230_640.jpg" alt="Natural">
+                <img onclick="renderFiltered(3); openDialog();" src="./sportauto/sport-4155825_1920.jpg"
+                    alt="Sportauto">
+                <img onclick="renderFiltered(4); openDialog();" src="Advent/advent-1883840_1280.jpg" alt="Advent">
+                <img onclick="renderFiltered(5); openDialog();" src="./Eagle/bald-eagles-8493350_1280.jpg" alt="Eagle">
+                <img onclick="renderFiltered(6); openDialog();" src="./Fuerteventura/landscape-4904760_1280.jpg"
+                    alt="Fuerteventura">
+                <img onclick="renderFiltered(7); openDialog();" src="./Hunde/animals-7862112_1280.jpg" alt="Hunde">
+                <img onclick="renderFiltered(8); openDialog();" src="Internet/apps-426559_1280.jpg" alt="Internet">
+                <img onclick="renderFiltered(9); openDialog();" src="MarryChristmas/ai-generated-8438102_1280.jpg"
+                    alt="Merry Christmas">
+                <img onclick="renderFiltered(10); openDialog();" src="Programmieren/brain-744207_1280.jpg"
+                    alt="Programmieren">
+                <img onclick="renderFiltered(11); openDialog();" src="Regenbogen/mountains-9553822_1280.png"
+                    alt="Regenbogen">
+                <img onclick="renderFiltered(12); openDialog();" src="Winter/christmas-wallpaper-636634_1280.jpg"
+                    alt="Winter">
+            </span>
+        </div>
     </main>
+    <dialog  id="myDialog" closedby="any">
+        <header class="header_dia">
+            <a href="https://pixabay.com/service/license-summary/">
+                <img src="./logo/pixabay-2071080_640.png" alt="PixaLicense" class="pixabay_logo">
+            </a>
+            <button class="header_close" onclick="closeDialog()">&#10060;</button>
+        </header>
+        <section>
+            <div id="content"></div>
+            <div>
+                <img class="dialogImage" id="dialogImage" src="" alt="">
+            </div>
+        </section>
+        <footer class="dialogFoot">
+            <button class="header_dia_button" id="prevButton">&#x21E6;</button>
+            <h2 id="alt-info"></h2>
+            <button class="header_dia_button" id="nextButton">&#x21E8;</button>
+        </footer>
+    </dialog>
+
     <footer class="site_footer">
         <a href="https://developerakademie.com/"><img class="img_footer" src="./LOGO_DA.png" alt="logofooter"></a>
         <p class="p_footer">© Copyright 2024 - Alle Rechte vorbehalten</p>
