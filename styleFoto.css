@@ -8,7 +8,7 @@
   margin: 0;
 }
 
-main,
+
 body,
 html {
   height: 100%;
@@ -19,6 +19,12 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 92vh;
 }
 
 .page-content,
@@ -40,9 +46,11 @@ header {
   margin: 0;
   padding-inline: 10px;
 }
+
 .pixabay_logo {
   width: 120px;
   height: auto;
+
   :hover {
     cursor: pointer;
   }
@@ -136,13 +144,9 @@ footer button {
 /*Site*/
 @media (max-width:1410px) {
 
-  .spanimg {
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-
   h1.mypic {
     font-size: 80px;
+    margin-bottom: 32px;
   }
 
   .site-content {
@@ -152,42 +156,41 @@ footer button {
 
 @media (max-width:1125px) {
   h1.mypic {
-    font-size: 60px;
-    /* margin-bottom: 64px; */
+    font-size: 64px;
+    margin-top: 24px;
   }
 
   .dialogImage {
-    width: 600px;
-    height: 400px;
+    width: 780px;
+    height: 580px;
   }
 
   .spanimg img {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
   }
 
   .spanimg {
-    padding-right: 50px;
-    padding-left: 50px;
-    gap: 35px;
+    /* padding-right: 50px;
+    padding-left: 50px; */
+    gap: 24px;
   }
 
 }
 
-@media (max-width:845px) {
+@media (max-width:910px) {
   .dialogImage {
     width: 500px;
     height: 350px;
   }
 
   h1.mypic {
-    font-size: 40px;
-    margin-bottom: 64px;
+    font-size: 48px;
   }
 
   .spanimg img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }
 
   .spanimg {
@@ -196,36 +199,46 @@ footer button {
     gap: 25px;
   }
 
-  .site-content {
+  /* .site-content {
     display: flex;
     flex-direction: column;
     padding-top: 100px;
-  }
+  } */
 }
 
 @media (max-width:670px) {
+  h1.mypic {
+    font-size: 42px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
   .dialogImage {
     width: 400px;
     height: 300px;
   }
 
   .site-content {
-    margin-top: 80px;
+    /* margin-top: 80px; */
     padding: 0;
   }
 
-  .spanimg {
+  .spanimg img {
+    width: 124px;
+    height: 124px;
+  }
 
-    gap: 35px;
+  .spanimg {
+    padding-left: unset;
+    padding-right: unset;
+    gap: 8px;
   }
 }
 
-@media (max-width:500px) {
+@media (max-width:490px) {
   .site-content {
-    padding-top: 32px;
-    margin: 0 auto;
+    /* padding-top: 32px;
+    margin: 0 auto; */
   }
-
   .dialogImage {
     width: 250px;
     height: 200px;
@@ -233,18 +246,24 @@ footer button {
 
   h1.mypic {
     font-size: 32px;
-    margin-top: 16px;
-    margin-bottom: 32px;
+    margin-top: 20px;
+    margin-bottom: 24px;
   }
-  img.LOGO{
+
+  img.LOGO {
     margin: unset;
   }
+
   .header_site {
     padding-left: 0;
+    height: 90px;
   }
+
   .spanimg {
-    margin-top: 32px;
-    gap: 15px;
+    padding-left: unset;
+    padding-right: unset;
+    gap: 3px;
+    padding-bottom: 10px;
   }
 }
 
@@ -253,15 +272,12 @@ footer button {
   max-width: 1440px;
   margin: 0 auto;
   padding-inline: 10px;
-
 }
 
 .header_site {
   background-color: #0a222c;
-  height: 120px;
+  height: 84px;
   box-shadow: 0px 4px 8px #000000;
-  display: flex;
-  align-items: center;
 }
 
 
@@ -293,18 +309,18 @@ footer button {
 }
 
 span {
-  padding-right: 300px;
-  padding-left: 300px;
+  /* padding-right: 250px;
+  padding-left: 250px; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 45px;
+  gap: 15px;
 }
 
 span img {
   border-radius: 25px;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-position: center;
   object-fit: cover;
 }
@@ -313,7 +329,7 @@ span img:hover {
   cursor: pointer;
   opacity: 0.8;
   box-shadow: 0 4px 4px rgba(255, 255, 255, 0.7);
-  transform: scale(1.5);
+  transform: scale(1.2);
   transition: all 0.3s ease-in-out;
 }
 
@@ -327,7 +343,7 @@ footer {
 
 .img_footer {
   width: 140px;
-  height: 75px;
+  /* height: 75px; */
   object-fit: contain;
 }
 
@@ -336,13 +352,14 @@ footer {
   color: white;
   font-family: 'comic neue', sans-serif;
   font-size: 8px;
+  padding-top: 8px;
 }
 
 .site_footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 84px;
   background-color: #0a222c;
   box-shadow: 0px -4px 8px #000000;
   max-width: 100%;
