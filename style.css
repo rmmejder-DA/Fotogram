@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'comic neue';
-  src: url('Comic_Neue/ComicNeue-Bold.ttf') format('truetype');
+  src: url('Comic_Font/ComicNeue-Bold.ttf') format('truetype');
 }
 
 * {
@@ -20,12 +20,6 @@ html {
   box-sizing: border-box;
 }
 
-.page-content {
-  display: flex;
-  flex-direction: column;
-  min-height: 92vh;
-}
-
 .page-content,
 .site_footer,
 .site-content,
@@ -33,7 +27,15 @@ html {
   max-width: 1440px;
   margin: 0 auto;
   padding-inline: 10px;
-  height: 93vh;
+  height: 100%;
+}
+
+.site-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 /*myDialog*/
@@ -50,24 +52,17 @@ header {
 .pixabay_logo {
   width: 120px;
   height: auto;
-  appearance: none;
+  outline-offset: 0;
+
   :hover {
     cursor: pointer;
   }
 }
 
-header button {
-  display: contents;
+.header_close {
+  border-color: transparent;
+  background-color: transparent;
   font-size: 24px;
-}
-
-.site-content {
-  display: contents;
-  align-items: center;
-  flex-direction: column;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 h2 {
@@ -112,16 +107,13 @@ button:hover {
 
 button:focus {
   outline-offset: 0;
-  outline: none;
 }
 
 footer button {
   display: flex;
   border: none;
-  padding: 10px;
   background-color: transparent;
   font-size: 54px;
-  appearance: none;
   background: linear-gradient(to right,
       red,
       orange,
@@ -130,7 +122,6 @@ footer button {
       blue,
       indigo,
       violet);
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -142,15 +133,27 @@ footer button {
 }
 
 /*Site*/
-@media (max-width:1410px) {
+@media (min-width:1450px) {
+  .dialogImage {
+    width: 1100px;
+    height: 720px;
+  }
+}
+
+@media (max-width:1440px) {
 
   h1.mypic {
     font-size: 80px;
-    margin-bottom: 32px;
+    margin-bottom: 80px;
   }
 
   .site-content {
-    padding-top: 120px;
+    padding-top: unset;
+  }
+
+  .dialogImage {
+    width: 1000px;
+    height: 660px;
   }
 }
 
@@ -158,6 +161,7 @@ footer button {
   h1.mypic {
     font-size: 64px;
     margin-top: 24px;
+    margin-bottom: 32px;
   }
 
   .dialogImage {
@@ -165,12 +169,12 @@ footer button {
     height: 580px;
   }
 
-  .spanimg img {
+  .image_grid img {
     width: 200px;
     height: 200px;
   }
 
-  .spanimg {
+  .image_grid {
     /* padding-right: 50px;
     padding-left: 50px; */
     gap: 24px;
@@ -186,27 +190,30 @@ footer button {
 
   h1.mypic {
     font-size: 48px;
+    margin-bottom: 32px;
   }
 
-  .spanimg img {
+  .image_grid img {
     width: 150px;
     height: 150px;
   }
 
-  .spanimg {
+  .image_grid {
     padding-right: 20px;
     padding-left: 20px;
     gap: 25px;
   }
 
   .page-content {
-    margin-top: 100px;
+    margin-bottom: 12px;
+    height: unset;
   }
 }
 
 @media (max-width:670px) {
   .page-content {
     margin-top: 80px;
+    height: unset;
   }
 
   h1.mypic {
@@ -225,12 +232,12 @@ footer button {
     padding: 0;
   }
 
-  .spanimg img {
+  .image_grid img {
     width: 124px;
     height: 124px;
   }
 
-  .spanimg {
+  .image_grid {
     padding-left: unset;
     padding-right: unset;
     gap: 8px;
@@ -239,7 +246,8 @@ footer button {
 
 @media (max-width:490px) {
   .page-content {
-    margin-top: 60px;
+    margin-top: 32px;
+    height: unset;
   }
 
   .dialogImage {
@@ -249,6 +257,7 @@ footer button {
 
   h1.mypic {
     font-size: 32px;
+    text-align: center;
     margin-top: 12px;
     margin-bottom: 24px;
   }
@@ -262,7 +271,7 @@ footer button {
     height: 90px;
   }
 
-  .spanimg {
+  .image_grid {
     padding-left: unset;
     padding-right: unset;
     gap: 3px;
@@ -272,7 +281,8 @@ footer button {
 
 @media (max-width:415px) {
   .page-content {
-    margin-top: 40px;
+    margin-top: 10px;
+    height: unset;
   }
 
   .dialogImage {
@@ -296,13 +306,13 @@ footer button {
 
 
 .mypic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
   font-family: 'comic neue', sans-serif;
-  text-align: center;
   font-size: 80px;
   font-weight: 400;
   color: #ffffff;
-  margin-bottom: 64px;
-  margin-top: 64px;
   background: linear-gradient(to right,
       red,
       orange,
@@ -311,7 +321,6 @@ footer button {
       blue,
       indigo,
       violet);
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -322,14 +331,14 @@ footer button {
   margin-left: 10px;
 }
 
-span {
+.image_grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-span img {
+.image_grid img {
   border-radius: 25px;
   width: 200px;
   height: 200px;
@@ -337,7 +346,7 @@ span img {
   object-fit: cover;
 }
 
-span img:hover {
+.image_grid img:hover {
   cursor: pointer;
   opacity: 0.8;
   box-shadow: 0 4px 4px rgba(255, 255, 255, 0.7);

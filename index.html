@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Fotogram</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon/faviconlittle.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="Comic_Font/ComicNeue-Bold.ttf" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header_site">
+        <div class="logo_container">
+            <img class="LOGO" src="logo/Fotogram_Logo.svg" alt="LOGO">
+        </div>
+    </header>
+    <main class="page-content">
+        <div class="site-content">
+            <h1 class="mypic">Mein Persönliches Fotoalbum</h1>
+            <div id="contentimg" class="image_grid">
+                <img tabindex="0" onclick="openDialog();renderFiltered(1);"src="./image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG" alt="Katzen">
+                <img tabindex="0" onclick="openDialog();renderFiltered(2);" src="./image/animal-7790230_640.jpg" alt="Natural">
+                <img tabindex="0" onclick="openDialog();renderFiltered(3);" src="./image/sport-4155825_1920.jpg" alt="Sportauto">
+                <img tabindex="0" onclick="openDialog();renderFiltered(4);" src="image/advent-1883840_1280.jpg" alt="Advent">
+                <img tabindex="0" onclick="openDialog();renderFiltered(5);" src="./image/bald-eagles-8493350_1280.jpg" alt="Eagle">
+                <img tabindex="0" onclick="openDialog();renderFiltered(6);" src="./image/landscape-4904760_1280.jpg"
+                    alt="Fuerteventura">
+                <img tabindex="0" onclick="openDialog();renderFiltered(7);" src="./image/animals-7862112_1280.jpg" alt="Hunde">
+                <img tabindex="0" onclick="openDialog();renderFiltered(8);" src="./image/apps-426559_1280.jpg" alt="Internet">
+                <img tabindex="0" onclick="openDialog();renderFiltered(9);" src="./image/ai-generated-8438102_1280.jpg"
+                    alt="Merry Christmas">
+                <img tabindex="0" onclick="openDialog();renderFiltered(10);" src="./image/brain-744207_1280.jpg" alt="Programmieren">
+                <img tabindex="0" onclick="openDialog();renderFiltered(11);" src="./image/mountains-9553822_1280.png"
+                    alt="Regenbogen">
+                <img onclick="openDialog();renderFiltered(12);" src="./image/christmas-wallpaper-636634_1280.jpg"
+                    alt="Winter">
+            </div>
+        </div>
+    </main>
+    <dialog id="myDialog" closedby="any">
+        <header class="header_dia">
+            <a href="https://pixabay.com/service/license-summary/">
+                <img src="./logo/pixabay-2071080_640.png" alt="PixaLicense" class="pixabay_logo">
+            </a>
+            <div id="imageInfo" >
+                <p style="color: white;"></p>
+            </div>
+            <button tabindex="0" class="header_close" onclick="closeDialog()">&#10060;</button>
+        </header>
+        <section onload="render()">
+            <div id="content"></div>
+            <div class="dialogContent">
+                <img class="dialogImage" id="dialogImage" src="" alt="">
+            </div>
+        </section>
+        <footer class="dialogFoot">
+            <button tabindex="0" class="header_dia_button" id="prevButton">&#x21E6;</button>
+            <h2 id="alt-info"></h2>
+            <button tabindex="0" class="header_dia_button" id="nextButton">&#x21E8;</button>
+        </footer>
+    </dialog>
+
+    <footer class="site_footer">
+        <a href="https://developerakademie.com/"><img class="img_footer" src="./logo/LOGO_DA.png" alt="logofooter"></a>
+        <p class="p_footer">© Copyright 2024 - Alle Rechte vorbehalten</p>
+    </footer>
+
+</body>
+
+<script src="./main.js"></script>
+
+</html>
