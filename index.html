@@ -10,7 +10,7 @@
     <link href="Comic_Font/ComicNeue-Bold.ttf" rel="stylesheet">
 </head>
 
-<body>
+<body onload="render()">
     <header class="header_site">
         <div class="logo_container">
             <img class="LOGO" src="logo/Fotogram_Logo.svg" alt="LOGO">
@@ -20,22 +20,7 @@
         <div class="site-content">
             <h1 class="mypic">Mein Persönliches Fotoalbum</h1>
             <div id="contentimg" class="image_grid">
-                <img tabindex="0" onclick="openDialog();renderFiltered(1);"src="./image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG" alt="Katzen">
-                <img tabindex="0" onclick="openDialog();renderFiltered(2);" src="./image/animal-7790230_640.jpg" alt="Natural">
-                <img tabindex="0" onclick="openDialog();renderFiltered(3);" src="./image/sport-4155825_1920.jpg" alt="Sportauto">
-                <img tabindex="0" onclick="openDialog();renderFiltered(4);" src="image/advent-1883840_1280.jpg" alt="Advent">
-                <img tabindex="0" onclick="openDialog();renderFiltered(5);" src="./image/bald-eagles-8493350_1280.jpg" alt="Eagle">
-                <img tabindex="0" onclick="openDialog();renderFiltered(6);" src="./image/landscape-4904760_1280.jpg"
-                    alt="Fuerteventura">
-                <img tabindex="0" onclick="openDialog();renderFiltered(7);" src="./image/animals-7862112_1280.jpg" alt="Hunde">
-                <img tabindex="0" onclick="openDialog();renderFiltered(8);" src="./image/apps-426559_1280.jpg" alt="Internet">
-                <img tabindex="0" onclick="openDialog();renderFiltered(9);" src="./image/ai-generated-8438102_1280.jpg"
-                    alt="Merry Christmas">
-                <img tabindex="0" onclick="openDialog();renderFiltered(10);" src="./image/brain-744207_1280.jpg" alt="Programmieren">
-                <img tabindex="0" onclick="openDialog();renderFiltered(11);" src="./image/mountains-9553822_1280.png"
-                    alt="Regenbogen">
-                <img onclick="openDialog();renderFiltered(12);" src="./image/christmas-wallpaper-636634_1280.jpg"
-                    alt="Winter">
+                <!-- Bilder werden hier durch JavaScript eingefügt -->
             </div>
         </div>
     </main>
@@ -49,7 +34,7 @@
             </div>
             <button tabindex="0" class="header_close" onclick="closeDialog()">&#10060;</button>
         </header>
-        <section onload="render()">
+        <section>
             <div id="content"></div>
             <div class="dialogContent">
                 <img class="dialogImage" id="dialogImage" src="" alt="">

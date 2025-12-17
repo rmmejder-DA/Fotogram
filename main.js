@@ -1,7 +1,21 @@
 const dialogRef = document.getElementById('myDialog');
 const dialogImage = document.getElementById('dialogImage');
-
-let img = [
+const siteTitle = document.getElementById('contentimg')
+let siteimgarr = [
+  './image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG',
+  './image/animal-7790230_640.jpg',
+  './image/sport-4155825_1920.jpg',
+  './image/advent-1883840_1280.jpg',
+  './image/bald-eagles-8493350_1280.jpg',
+  './image/landscape-4904760_1280.jpg',
+  './image/animals-7862112_1280.jpg',
+  './image/apps-426559_1280.jpg',
+  './image/ai-generated-8438102_1280.jpg',
+  './image/brain-744207_1280.jpg',
+  './image/mountains-9553822_1280.png',
+  './image/christmas-wallpaper-636634_1280.jpg'
+];
+let catarrimgarr = [
   './image/katzen-4604843_1280.jpg',
   './image/f07d322e-ef42-4e1e-90d5-a0a3284276a4 (2).JPG',
   './image/d2058bfe-21c4-4015-9a00-6fa02f13d25a (2).JPG',
@@ -17,7 +31,7 @@ let img = [
   './image/2b561ab7-4458-4082-855f-98fdc5f66ebf (2).JPG',
   './image/0e7d8016-9d3e-45f6-a34f-48d356fe27cc.JPG'
 ];
-let img2 = [
+let natureimgarr = [
   './image/bear-8275920_1280.jpg',
   './image/beetle-7997225_1280.jpg',
   './image/berg.jpg',
@@ -33,7 +47,7 @@ let img2 = [
   './image/volcano-3779159_1280.jpg',
   './image/road-1072821_1280.jpg'
 ];
-let img3 = [
+let sportcararr = [
   './image/car-49278_1280.jpg',
   './image/car-race-438467_1280.jpg',
   './image/car-63930_1280.jpg',
@@ -49,7 +63,7 @@ let img3 = [
   './image/sports-car-6282703_1280.jpg',
   './image/supercar-8589586_640.png'
 ];
-let img4 = [
+let adventarr = [
   './image/christmas-7668272_1280.jpg',
   './image/gingerbread-7666269_1280.jpg',
   './image/star-6803666_1280.jpg',
@@ -65,7 +79,7 @@ let img4 = [
   './image/sheet-music-8398449_1280.jpg',
   './image/star-514848_1280.jpg'
 ];
-let img5 = [
+let eaglearr = [
   './image/birds-217590_1280.jpg',
   './image/eagle-1450672_1280.jpg',
   './image/eagle-1753002_1280.jpg',
@@ -82,7 +96,7 @@ let img5 = [
   './image/eagle-6239046_1280.jpg',
   './image/eagle-8849052_1280.jpg'
 ];
-let img6 = [
+let fuerteventuraarr  = [
   './image/squirrel-barbary-3492406_1280.jpg',
   './image/pipit-5683656_1280.jpg',
   './image/monk-parakeet-2884519_1280.jpg',
@@ -98,7 +112,7 @@ let img6 = [
   './image/surf-900287_1280.jpg',
   './image/volcano-2352450_1280.jpg'
 ];
-let img7 = [
+let dogarr = [
   './image/shepherd-dog-4357790_1280.jpg',
   './image/dogs-8613175_1280.jpg',
   './image/dogs-6463032_1280.jpg',
@@ -114,7 +128,7 @@ let img7 = [
   './image/pets-962215_1280.jpg',
   './image/puppy-1040951_1280.jpg'
 ];
-let img8 = [
+let codearr = [
   './image/browser-773215_1280.png',
   './image/earth-2254769_1280.jpg',
   './image/tablet-5623396_1280.jpg',
@@ -130,7 +144,7 @@ let img8 = [
   './image/monkey-4042658_1280.jpg',
   './image/web-1045994_1280.jpg'
 ];
-let img9 = [
+let christmasarr = [
   './image/doll-figures-3015495_1280.jpg',
   './image/santa-claus-1614994_1280.png',
   './image/stollen-6848167_1280.jpg',
@@ -146,7 +160,7 @@ let img9 = [
   './image/snowflake-1918794_1280.jpg',
   './image/snowman-8413769_1280.jpg'
 ];
-let img10 = [
+let internetarr = [
   './image/code-1839406_1280.jpg',
   './image/digitization-6892337_1280.jpg',
   './image/hacker-5027679_1280.jpg',
@@ -162,7 +176,7 @@ let img10 = [
   './image/technician-3652287_1280.jpg',
   './image/web-3157323_1280.jpg'
 ];
-let img11 = [
+let rainbowarr = [
   './image/rainbow-4047523_1280.jpg',
   './image/rainbow-5324147_1280.jpg',
   './image/rainbow-7350780_1280.jpg',
@@ -178,7 +192,7 @@ let img11 = [
   './image/rainbow-9440893_1280.jpg',
   './image/soap-bubble-3490954_1280.jpg'
 ];
-let img12 = [
+let winterarr = [
   './image/matterhorn-3019429_1280.jpg',
   './image/snow-7658399_1280.jpg',
   './image/village-9190397_1280.jpg',
@@ -197,7 +211,7 @@ let img12 = [
 
 // document.images
 let currentImage = 0;
-let sliderImages = img;
+let sliderImages = ImageTrackList;
 
 function openDialog() {
   if (dialogRef) dialogRef.showModal();
@@ -209,9 +223,6 @@ function closeDialog() {
 }
 
 document.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
-    closeDialog();
-  }
   if (event.key === 'ArrowRight') {
     document.getElementById("nextButton").click();
   }
@@ -221,7 +232,10 @@ document.addEventListener('keydown', function (event) {
 });
 
 function renderFiltered(index) {
-  const imageArrays = [img, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
+  const imageArrays = [catarrimgarr, natureimgarr, sportcararr, 
+    adventarr, eaglearr, fuerteventuraarr, 
+    dogarr, internetarr, christmasarr, 
+    winterarr, codearr, rainbowarr];
 
   if (index >= 1 && index <= imageArrays.length) {
     render(imageArrays[index - 1]);
@@ -240,12 +254,23 @@ function render(arrimg) {
     contentRef.innerHTML += getNotesHtml(i, arrimg);
   }
 }
+function getSiteTitle([siteimgarr]){
+    if (onload === true) {
+    currentImage = 0;
+    siteTitle.src = siteimgarr[currentImage];
+  }
+  return `<button >`
+}
+
 function getNotesHtml(i, arr) {
   if (onload === true) {
     currentImage = 0;
     dialogImage.src = sliderImages[currentImage];
   }
-  return `<div class='dialogContent'><img src="${arr[i]}" alt="[$sliderImage.alt]" style="cursor:pointer;" onclick="currentImage=${i}; dialogImage.src=sliderImages[${i}]; openDialog();"></div>`;
+  return `<div class='dialogContent'><img src="${arr[i]}" alt="[$sliderImage.alt]" 
+                              style="cursor:pointer;" onclick="currentImage=${i}; 
+                        dialogImage.src=sliderImages[${i}]; openDialog();"></div>
+                        <div class="contentimg"></div>`;
 }
 
 document.getElementById("prevButton").onclick = function () {
