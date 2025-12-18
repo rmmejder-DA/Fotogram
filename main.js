@@ -1,6 +1,7 @@
 const dialogRef = document.getElementById('myDialog');
 const dialogImage = document.getElementById('dialogImage');
 const siteTitle = document.getElementById('contentimg')
+
 let siteimgarr = [
   './image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG',
   './image/animal-7790230_640.jpg',
@@ -211,7 +212,7 @@ let winterarr = [
 
 // document.images
 let currentImage = 0;
-let sliderImages = ImageTrackList;
+let sliderImages = siteimgarr;
 
 function openDialog() {
   if (dialogRef) dialogRef.showModal();
@@ -247,30 +248,17 @@ function render(arrimg) {
   contentRef.innerHTML = '';
   sliderImages = arrimg;
   currentImage = 0;
+  dialogImage.src = sliderImages[currentImage];
   for (let i = 0; i < arrimg.length; i++) {
-    if (i === 0) {
-      dialogImage.src = sliderImages[currentImage];
-    }
     contentRef.innerHTML += getNotesHtml(i, arrimg);
   }
 }
-function getSiteTitle([siteimgarr]){
-    if (onload === true) {
-    currentImage = 0;
-    siteTitle.src = siteimgarr[currentImage];
-  }
-  return `<button >`
-}
 
 function getNotesHtml(i, arr) {
-  if (onload === true) {
-    currentImage = 0;
-    dialogImage.src = sliderImages[currentImage];
-  }
-  return `<div class='dialogContent'><img src="${arr[i]}" alt="[$sliderImage.alt]" 
-                              style="cursor:pointer;" onclick="currentImage=${i}; 
-                        dialogImage.src=sliderImages[${i}]; openDialog();"></div>
-                        <div class="contentimg"></div>`;
+  return `<div class='dialogContent'><img src="${arr[i]}" alt="${arr[i]}" 
+                style="cursor:pointer;" onclick="currentImage=${i}; 
+                        dialogImage.src=sliderImages[${i}]; openDialog();">
+          </div>`;
 }
 
 document.getElementById("prevButton").onclick = function () {

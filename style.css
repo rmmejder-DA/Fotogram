@@ -290,7 +290,13 @@ footer button {
     height: 350px;
   }
 }
-
+.site_btn {
+  border: none;
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+}
 .logo_container {
   width: 100%;
   max-width: 1440px;
