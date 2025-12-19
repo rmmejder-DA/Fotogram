@@ -1,8 +1,4 @@
-const dialogRef = document.getElementById('myDialog');
-const dialogImage = document.getElementById('dialogImage');
-const siteTitle = document.getElementById('contentimg')
-
-let siteimgarr = [
+let siteimg = [
   './image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG',
   './image/animal-7790230_640.jpg',
   './image/sport-4155825_1920.jpg',
@@ -16,7 +12,7 @@ let siteimgarr = [
   './image/mountains-9553822_1280.png',
   './image/christmas-wallpaper-636634_1280.jpg'
 ];
-let catarrimgarr = [
+let catimgarr = [
   './image/katzen-4604843_1280.jpg',
   './image/f07d322e-ef42-4e1e-90d5-a0a3284276a4 (2).JPG',
   './image/d2058bfe-21c4-4015-9a00-6fa02f13d25a (2).JPG',
@@ -97,7 +93,7 @@ let eaglearr = [
   './image/eagle-6239046_1280.jpg',
   './image/eagle-8849052_1280.jpg'
 ];
-let fuerteventuraarr  = [
+let fuerteventuraarr = [
   './image/squirrel-barbary-3492406_1280.jpg',
   './image/pipit-5683656_1280.jpg',
   './image/monk-parakeet-2884519_1280.jpg',
@@ -211,13 +207,35 @@ let winterarr = [
 ];
 
 // document.images
+
+let imageArrays = [
+  catimgarr,
+  natureimgarr,
+  sportcararr,
+  adventarr,
+  eaglearr,
+  fuerteventuraarr,
+  dogarr,
+  codearr,
+  christmasarr,
+  internetarr,
+  rainbowarr,
+  winterarr];
+
 let currentImage = 0;
-let sliderImages = siteimgarr;
+
+let sliderImages = imageArrays[0];
+
+let siteimages = siteimg;
+
+let dialogRef = document.getElementById('myDialog');
+let dialogImage = document.getElementById('dialogImage');
 
 function openDialog() {
   if (dialogRef) dialogRef.showModal();
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
+
 }
 function closeDialog() {
   if (dialogRef) dialogRef.close();
@@ -233,46 +251,59 @@ document.addEventListener('keydown', function (event) {
 });
 
 function renderFiltered(index) {
-  const imageArrays = [catarrimgarr, natureimgarr, sportcararr, 
-    adventarr, eaglearr, fuerteventuraarr, 
-    dogarr, internetarr, christmasarr, 
-    winterarr, codearr, rainbowarr];
+  sliderImages = imageArrays[0];
+  currentImage = 0;
 
   if (index >= 1 && index <= imageArrays.length) {
-    render(imageArrays[index - 1]);
+    sliderImages = imageArrays[index - 1];
+    render();
   }
 }
 
-function render(arrimg) {
+function render(currentSliderImages = sliderImages, currentSiteimages = siteimages) {
+  
   let contentRef = document.getElementsByClassName('dialogImage')[0];
   contentRef.innerHTML = '';
-  sliderImages = arrimg;
-  currentImage = 0;
-  dialogImage.src = sliderImages[currentImage];
-  for (let i = 0; i < arrimg.length; i++) {
-    contentRef.innerHTML += getNotesHtml(i, arrimg);
+
+  for (let i = 0; i < currentSliderImages.length; i++) {
+    contentRef.innerHTML += getNotesHtml(i, currentSliderImages);
+  }
+
+  let SiteimgRef = document.getElementById('contentimg');
+  SiteimgRef.innerHTML = '';
+
+  for (let i = 0; i < currentSiteimages.length; i++) {
+    SiteimgRef.innerHTML += getImageHtml(i, currentSiteimages);
   }
 }
 
-function getNotesHtml(i, arr) {
-  return `<div class='dialogContent'><img src="${arr[i]}" alt="${arr[i]}" 
-                style="cursor:pointer;" onclick="currentImage=${i}; 
-                        dialogImage.src=sliderImages[${i}]; openDialog();">
-          </div>`;
+function getNotesHtml(i, sliderImages) {
+  return `<div>
+              <img src="${sliderImages[i]}" onclick="renderFiltered(${i + 1})">
+          </div>`;}
+
+function getImageHtml(i, siteimages) {
+  return `
+              <button style='background:none;border:none;padding:0;' onclick="openDialog();renderFiltered(${i + 1})">
+                  <img src="${siteimages[i]}">
+              </button>
+          `;
+}
+
+function updateImageInfo() {
+  dialogImage.src = sliderImages[currentImage];
+  const altInfoRef = document.getElementById('alt-info');
+  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
 }
 
 document.getElementById("prevButton").onclick = function () {
   if (!sliderImages || sliderImages.length === 0) return;
   currentImage = (currentImage - 1 + sliderImages.length) % sliderImages.length;
-  dialogImage.src = sliderImages[currentImage];
-  const altInfoRef = document.getElementById('alt-info');
-  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
+  updateImageInfo();
 };
 
 document.getElementById("nextButton").onclick = function () {
   if (!sliderImages || sliderImages.length === 0) return;
   currentImage = (currentImage + 1) % sliderImages.length;
-  dialogImage.src = sliderImages[currentImage];
-  const altInfoRef = document.getElementById('alt-info');
-  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
+  updateImageInfo();
 };
