@@ -264,14 +264,12 @@ function render(currentSliderImages = sliderImages, currentSiteimages = siteimag
   
   let contentRef = document.getElementsByClassName('dialogImage')[0];
   contentRef.innerHTML = '';
-
   for (let i = 0; i < currentSliderImages.length; i++) {
     contentRef.innerHTML += getNotesHtml(i, currentSliderImages);
   }
 
   let SiteimgRef = document.getElementById('contentimg');
   SiteimgRef.innerHTML = '';
-
   for (let i = 0; i < currentSiteimages.length; i++) {
     SiteimgRef.innerHTML += getImageHtml(i, currentSiteimages);
   }
@@ -281,7 +279,6 @@ function getNotesHtml(i, sliderImages) {
   return `<div>
               <img src="${sliderImages[i]}" onclick="renderFiltered(${i + 1})">
           </div>`;}
-
 function getImageHtml(i, siteimages) {
   return `
               <button style='background:none;border:none;padding:0;' onclick="openDialog();renderFiltered(${i + 1})">
