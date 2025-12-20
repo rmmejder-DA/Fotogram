@@ -44,7 +44,7 @@ let natureimgarr = [
   './image/volcano-3779159_1280.jpg',
   './image/road-1072821_1280.jpg'
 ];
-let sportcararr = [
+let sportcarimgarr = [
   './image/car-49278_1280.jpg',
   './image/car-race-438467_1280.jpg',
   './image/car-63930_1280.jpg',
@@ -60,7 +60,7 @@ let sportcararr = [
   './image/sports-car-6282703_1280.jpg',
   './image/supercar-8589586_640.png'
 ];
-let adventarr = [
+let adventimgarr = [
   './image/christmas-7668272_1280.jpg',
   './image/gingerbread-7666269_1280.jpg',
   './image/star-6803666_1280.jpg',
@@ -76,7 +76,7 @@ let adventarr = [
   './image/sheet-music-8398449_1280.jpg',
   './image/star-514848_1280.jpg'
 ];
-let eaglearr = [
+let eagleimgarr = [
   './image/birds-217590_1280.jpg',
   './image/eagle-1450672_1280.jpg',
   './image/eagle-1753002_1280.jpg',
@@ -93,7 +93,7 @@ let eaglearr = [
   './image/eagle-6239046_1280.jpg',
   './image/eagle-8849052_1280.jpg'
 ];
-let fuerteventuraarr = [
+let fuerteventuraimgarr = [
   './image/squirrel-barbary-3492406_1280.jpg',
   './image/pipit-5683656_1280.jpg',
   './image/monk-parakeet-2884519_1280.jpg',
@@ -109,7 +109,7 @@ let fuerteventuraarr = [
   './image/surf-900287_1280.jpg',
   './image/volcano-2352450_1280.jpg'
 ];
-let dogarr = [
+let dogimgarr = [
   './image/shepherd-dog-4357790_1280.jpg',
   './image/dogs-8613175_1280.jpg',
   './image/dogs-6463032_1280.jpg',
@@ -125,7 +125,7 @@ let dogarr = [
   './image/pets-962215_1280.jpg',
   './image/puppy-1040951_1280.jpg'
 ];
-let codearr = [
+let codeimgarr = [
   './image/browser-773215_1280.png',
   './image/earth-2254769_1280.jpg',
   './image/tablet-5623396_1280.jpg',
@@ -141,7 +141,7 @@ let codearr = [
   './image/monkey-4042658_1280.jpg',
   './image/web-1045994_1280.jpg'
 ];
-let christmasarr = [
+let christmasimgarr = [
   './image/doll-figures-3015495_1280.jpg',
   './image/santa-claus-1614994_1280.png',
   './image/stollen-6848167_1280.jpg',
@@ -157,7 +157,7 @@ let christmasarr = [
   './image/snowflake-1918794_1280.jpg',
   './image/snowman-8413769_1280.jpg'
 ];
-let internetarr = [
+let internetimgarr = [
   './image/code-1839406_1280.jpg',
   './image/digitization-6892337_1280.jpg',
   './image/hacker-5027679_1280.jpg',
@@ -173,7 +173,7 @@ let internetarr = [
   './image/technician-3652287_1280.jpg',
   './image/web-3157323_1280.jpg'
 ];
-let rainbowarr = [
+let rainbowimgarr = [
   './image/rainbow-4047523_1280.jpg',
   './image/rainbow-5324147_1280.jpg',
   './image/rainbow-7350780_1280.jpg',
@@ -189,7 +189,7 @@ let rainbowarr = [
   './image/rainbow-9440893_1280.jpg',
   './image/soap-bubble-3490954_1280.jpg'
 ];
-let winterarr = [
+let winterimgarr = [
   './image/matterhorn-3019429_1280.jpg',
   './image/snow-7658399_1280.jpg',
   './image/village-9190397_1280.jpg',
@@ -211,16 +211,16 @@ let winterarr = [
 let imageArrays = [
   catimgarr,
   natureimgarr,
-  sportcararr,
-  adventarr,
-  eaglearr,
-  fuerteventuraarr,
-  dogarr,
-  codearr,
-  christmasarr,
-  internetarr,
-  rainbowarr,
-  winterarr];
+  sportcarimgarr,
+  adventimgarr,
+  eagleimgarr,
+  fuerteventuraimgarr,
+  dogimgarr,
+  codeimgarr,
+  christmasimgarr,
+  internetimgarr,
+  rainbowimgarr,
+  winterimgarr];
 
 let currentImage = 0;
 
@@ -235,10 +235,16 @@ function openDialog() {
   if (dialogRef) dialogRef.showModal();
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
-
 }
 function closeDialog() {
   if (dialogRef) dialogRef.close();
+}
+function ShowSlideshow() {
+
+  if (sliderImages.length === 0) return;
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliders[i].style.display = "block";
+  }
 }
 
 document.addEventListener('keydown', function (event) {
@@ -251,7 +257,6 @@ document.addEventListener('keydown', function (event) {
 });
 
 function renderFiltered(index) {
-  sliderImages = imageArrays[0];
   currentImage = 0;
 
   if (index >= 1 && index <= imageArrays.length) {
@@ -292,7 +297,13 @@ function updateImageInfo() {
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
 }
-
+function ViewerImage(index) {
+  let viewer = document.getElementById('viewer');
+  viewer.src = sliderImages[index];
+  if (index >= 0 && index < sliderImages.length) {
+    currentImage = index;
+  }
+}
 document.getElementById("prevButton").onclick = function () {
   if (!sliderImages || sliderImages.length === 0) return;
   currentImage = (currentImage - 1 + sliderImages.length) % sliderImages.length;
