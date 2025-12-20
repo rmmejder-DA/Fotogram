@@ -239,13 +239,6 @@ function openDialog() {
 function closeDialog() {
   if (dialogRef) dialogRef.close();
 }
-function ShowSlideshow() {
-
-  if (sliderImages.length === 0) return;
-  for (let i = 0; i < sliderImages.length; i++) {
-    sliders[i].style.display = "block";
-  }
-}
 
 document.addEventListener('keydown', function (event) {
   if (event.key === 'ArrowRight') {
@@ -275,14 +268,16 @@ function render(currentSliderImages = sliderImages, currentSiteimages = siteimag
 
   let SiteimgRef = document.getElementById('contentimg');
   SiteimgRef.innerHTML = '';
+
   for (let i = 0; i < currentSiteimages.length; i++) {
     SiteimgRef.innerHTML += getImageHtml(i, currentSiteimages);
   }
 }
 
+
 function getNotesHtml(i, sliderImages) {
   return `<div>
-              <img src="${sliderImages[i]}" onclick="renderFiltered(${i + 1})">
+              <img src="${sliderImages[i]}" onclick="renderFiltered(${i})">
           </div>`;}
 function getImageHtml(i, siteimages) {
   return `
@@ -297,13 +292,7 @@ function updateImageInfo() {
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
 }
-function ViewerImage(index) {
-  let viewer = document.getElementById('viewer');
-  viewer.src = sliderImages[index];
-  if (index >= 0 && index < sliderImages.length) {
-    currentImage = index;
-  }
-}
+
 document.getElementById("prevButton").onclick = function () {
   if (!sliderImages || sliderImages.length === 0) return;
   currentImage = (currentImage - 1 + sliderImages.length) % sliderImages.length;
