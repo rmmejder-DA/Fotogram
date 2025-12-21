@@ -260,8 +260,9 @@ function renderFiltered(index) {
 
 function render(currentSliderImages = sliderImages, currentSiteimages = siteimages) {
   
-  let contentRef = document.getElementsByClassName('dialogImage')[0];
+  let contentRef = document.getElementsByClassName('dialogImage');
   contentRef.innerHTML = '';
+
   for (let i = 0; i < currentSliderImages.length; i++) {
     contentRef.innerHTML += getNotesHtml(i, currentSliderImages);
   }
@@ -274,24 +275,22 @@ function render(currentSliderImages = sliderImages, currentSiteimages = siteimag
   }
 }
 
-
 function getNotesHtml(i, sliderImages) {
   return `<div>
               <img src="${sliderImages[i]}" onclick="renderFiltered(${i})">
           </div>`;}
 function getImageHtml(i, siteimages) {
   return `
-              <button style='background:none;border:none;padding:0;' onclick="openDialog();renderFiltered(${i + 1})">
+              <button style='background:none;border:none;padding:0;' onclick="openDialog()">
                   <img src="${siteimages[i]}">
-              </button>
-          `;
-}
+              </button>`;
+};
 
 function updateImageInfo() {
   dialogImage.src = sliderImages[currentImage];
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
-}
+};
 
 document.getElementById("prevButton").onclick = function () {
   if (!sliderImages || sliderImages.length === 0) return;
