@@ -10,7 +10,7 @@
     <link href="Comic_Font/ComicNeue-Bold.ttf" rel="stylesheet">
 </head>
 
-<body onload="render();">
+<body onload="render()">
     <header class="header_site">
         <div class="logo_container">
             <img class="LOGO" src="logo/Fotogram_Logo.svg" alt="LOGO">
@@ -19,24 +19,25 @@
     <main class="page-content">
         <div class="site-content">
             <h1 class="mypic">Mein Persönliches Fotoalbum</h1>
-            <div id="contentimg" class="image_grid"> 
-                <div id="conetnt"></div>
+            <div id="contentimg" class="image_grid">
+                <!-- Bilder werden hier durch JavaScript eingefügt -->
             </div>
         </div>
     </main>
-    <dialog id="myDialog">
+    <dialog id="myDialog" closedby="any">
         <header class="header_dia">
             <a href="https://pixabay.com/service/license-summary/">
                 <img src="./logo/pixabay-2071080_640.png" alt="PixaLicense" class="pixabay_logo">
             </a>
-            <div>
-                <p style="color: white;"id="imageInfo" ></p>
+            <div id="imageInfo" >
+                <p style="color: white;"></p>
             </div>
             <button tabindex="0" class="header_close" onclick="closeDialog()">&#10060;</button>
         </header>
         <section>
-            <div class="dialogImage" id="dialogImage">
-                
+            <div id="content"></div>
+            <div class="dialogContent">
+                <img class="dialogImage" id="dialogImage" src="" alt="">
             </div>
         </section>
         <footer class="dialogFoot">

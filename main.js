@@ -224,18 +224,21 @@ let imageArrays = [
 
 let currentImage = 0;
 
-let sliderImages = imageArrays[0];
+let sliderImages = imageArrays[0] || [];
 
 let siteimages = siteimg;
 
 let dialogRef = document.getElementById('myDialog');
 let dialogImage = document.getElementById('dialogImage');
 
-function openDialog() {
+function openDialog(i) {
+  currentImage = i || 0;
+  dialogImage.src = sliderImages[currentImage];
   if (dialogRef) dialogRef.showModal();
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
 }
+
 function closeDialog() {
   if (dialogRef) dialogRef.close();
 }
