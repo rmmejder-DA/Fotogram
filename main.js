@@ -261,32 +261,22 @@ function renderFiltered(index) {
   }
 }
 
-function render(currentSliderImages = sliderImages, currentSiteimages = siteimages) {
+function render(currentSiteimages = siteimages) {
   
-  let contentRef = document.getElementsByClassName('dialogImage');
-  contentRef.innerHTML = '';
-
-  for (let i = 0; i < currentSliderImages.length; i++) {
-    contentRef.innerHTML += getNotesHtml(i, currentSliderImages);
-  }
-
   let SiteimgRef = document.getElementById('contentimg');
   SiteimgRef.innerHTML = '';
 
   for (let i = 0; i < currentSiteimages.length; i++) {
-    SiteimgRef.innerHTML += getImageHtml(i, currentSiteimages);
+    SiteimgRef.innerHTML += getNotesHtml(i, currentSiteimages);
   }
 }
 
-function getNotesHtml(i, sliderImages) {
+function getNotesHtml(i, siteimages,sliderImages) {
+
   return `<div>
-              <img src="${sliderImages[i]}" onclick="renderFiltered(${i})">
-          </div>`;}
-function getImageHtml(i, siteimages) {
-  return `
-              <button style='background:none;border:none;padding:0;' onclick="openDialog()">
+              <button style='background:none;border:none;padding:0;' onclick="openDialog(${sliderImages});renderFiltered(${i + 1});">
                   <img src="${siteimages[i]}">
-              </button>`;
+              </button></div>`;
 };
 
 function updateImageInfo() {
