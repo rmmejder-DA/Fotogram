@@ -259,7 +259,7 @@ function renderFiltered(index) {
     sliderImages = imageArrays[index - 1];
     render();
   }
-  onclick=openDialog();
+  onclick=openDialog(currentImage);
 }
 
 function render(currentSiteimages = siteimages) {
