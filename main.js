@@ -304,7 +304,6 @@ if (dialogRef.open) {
 
 function renderFiltered(index) {
   currentImage = 0;
-
   if (index >= 1 && index <= AllimageArray.length) {
     sliderImages = AllimageArray[index - 1];
     render();
@@ -315,17 +314,14 @@ function renderFiltered(index) {
 }
 
 function render(currentSiteimages = siteimages) {
-  
   let SiteimgRef = document.getElementById('contentimg');
   SiteimgRef.innerHTML = '';
-
   for (let i = 0; i < currentSiteimages.length; i++) {
     SiteimgRef.innerHTML += getNotesHtml(i, currentSiteimages);
   }
 }
 
 function getNotesHtml(i, siteimages) {
-
   return `<div>
               <img style='background:none;border:none;padding:0;' onclick="openDialog();renderFiltered(${i + 1});"src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
         </div>`;
