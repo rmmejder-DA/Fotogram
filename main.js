@@ -1,6 +1,6 @@
-let siteimg = [
+let SitePictureArray = [
   './image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG',
-  './image/animal-7790230_640.jpg',
+  './image/nangchen-9918045_640.jpg',
   './image/sport-4155825_1920.jpg',
   './image/advent-1883840_1280.jpg',
   './image/bald-eagles-8493350_1280.jpg',
@@ -12,7 +12,8 @@ let siteimg = [
   './image/mountains-9553822_1280.png',
   './image/christmas-wallpaper-636634_1280.jpg'
 ];
-let catimgarr = [
+
+let CatImageArray = [
   './image/katzen-4604843_1280.jpg',
   './image/f07d322e-ef42-4e1e-90d5-a0a3284276a4 (2).JPG',
   './image/d2058bfe-21c4-4015-9a00-6fa02f13d25a (2).JPG',
@@ -28,7 +29,8 @@ let catimgarr = [
   './image/2b561ab7-4458-4082-855f-98fdc5f66ebf (2).JPG',
   './image/0e7d8016-9d3e-45f6-a34f-48d356fe27cc.JPG'
 ];
-let natureimgarr = [
+
+let NatureImageArray = [
   './image/bear-8275920_1280.jpg',
   './image/beetle-7997225_1280.jpg',
   './image/berg.jpg',
@@ -37,14 +39,15 @@ let natureimgarr = [
   './image/fern-9872693_640.jpg',
   './image/fly-637949_1280.jpg',
   './image/mount-fuji-2297961_1280.jpg',
-  './image/nangchen-9918045_640.jpg',
+  './image/animal-7790230_640.jpg',
   './image/snake-9059936_1280.jpg',
   './image/squirrel-8367079_1280.jpg',
   './image/strawberry-7224875_1280.jpg',
   './image/volcano-3779159_1280.jpg',
   './image/road-1072821_1280.jpg'
 ];
-let sportcarimgarr = [
+
+let SportCarImageArray = [
   './image/car-49278_1280.jpg',
   './image/car-race-438467_1280.jpg',
   './image/car-63930_1280.jpg',
@@ -60,7 +63,8 @@ let sportcarimgarr = [
   './image/sports-car-6282703_1280.jpg',
   './image/supercar-8589586_640.png'
 ];
-let adventimgarr = [
+
+let AdventImageArray = [
   './image/christmas-7668272_1280.jpg',
   './image/gingerbread-7666269_1280.jpg',
   './image/star-6803666_1280.jpg',
@@ -76,7 +80,8 @@ let adventimgarr = [
   './image/sheet-music-8398449_1280.jpg',
   './image/star-514848_1280.jpg'
 ];
-let eagleimgarr = [
+
+let EagleImageArray = [
   './image/birds-217590_1280.jpg',
   './image/eagle-1450672_1280.jpg',
   './image/eagle-1753002_1280.jpg',
@@ -93,7 +98,8 @@ let eagleimgarr = [
   './image/eagle-6239046_1280.jpg',
   './image/eagle-8849052_1280.jpg'
 ];
-let fuerteventuraimgarr = [
+
+let FuerteventuraImageArray = [
   './image/squirrel-barbary-3492406_1280.jpg',
   './image/pipit-5683656_1280.jpg',
   './image/monk-parakeet-2884519_1280.jpg',
@@ -109,7 +115,8 @@ let fuerteventuraimgarr = [
   './image/surf-900287_1280.jpg',
   './image/volcano-2352450_1280.jpg'
 ];
-let dogimgarr = [
+
+let DogImageArray = [
   './image/shepherd-dog-4357790_1280.jpg',
   './image/dogs-8613175_1280.jpg',
   './image/dogs-6463032_1280.jpg',
@@ -125,7 +132,8 @@ let dogimgarr = [
   './image/pets-962215_1280.jpg',
   './image/puppy-1040951_1280.jpg'
 ];
-let codeimgarr = [
+
+let CodeImageArray = [
   './image/browser-773215_1280.png',
   './image/earth-2254769_1280.jpg',
   './image/tablet-5623396_1280.jpg',
@@ -141,7 +149,8 @@ let codeimgarr = [
   './image/monkey-4042658_1280.jpg',
   './image/web-1045994_1280.jpg'
 ];
-let christmasimgarr = [
+
+let ChristmasImageArray = [
   './image/doll-figures-3015495_1280.jpg',
   './image/santa-claus-1614994_1280.png',
   './image/stollen-6848167_1280.jpg',
@@ -157,7 +166,8 @@ let christmasimgarr = [
   './image/snowflake-1918794_1280.jpg',
   './image/snowman-8413769_1280.jpg'
 ];
-let internetimgarr = [
+
+let InternetImageArray = [
   './image/code-1839406_1280.jpg',
   './image/digitization-6892337_1280.jpg',
   './image/hacker-5027679_1280.jpg',
@@ -173,7 +183,8 @@ let internetimgarr = [
   './image/technician-3652287_1280.jpg',
   './image/web-3157323_1280.jpg'
 ];
-let rainbowimgarr = [
+
+let RainbowImageArray = [
   './image/rainbow-4047523_1280.jpg',
   './image/rainbow-5324147_1280.jpg',
   './image/rainbow-7350780_1280.jpg',
@@ -189,7 +200,8 @@ let rainbowimgarr = [
   './image/rainbow-9440893_1280.jpg',
   './image/soap-bubble-3490954_1280.jpg'
 ];
-let winterimgarr = [
+
+let WinterImageArray = [
   './image/matterhorn-3019429_1280.jpg',
   './image/snow-7658399_1280.jpg',
   './image/village-9190397_1280.jpg',
@@ -208,28 +220,46 @@ let winterimgarr = [
 
 // document.images
 
-let imageArrays = [
-  catimgarr,
-  natureimgarr,
-  sportcarimgarr,
-  adventimgarr,
-  eagleimgarr,
-  fuerteventuraimgarr,
-  dogimgarr,
-  codeimgarr,
-  christmasimgarr,
-  internetimgarr,
-  rainbowimgarr,
-  winterimgarr];
+let AllimageArray = [
+  CatImageArray,
+  NatureImageArray,
+  SportCarImageArray,
+  AdventImageArray,
+  EagleImageArray,
+  FuerteventuraImageArray,
+  DogImageArray,
+  CodeImageArray,
+  ChristmasImageArray,
+  InternetImageArray,
+  RainbowImageArray,
+  WinterImageArray];
+
+  let imageCategories = [
+    "KATZEN",
+    "NATUR",
+    "SPORTWAGEN",
+    "ADVENT",
+    "ADLER",
+    "FUERTEVENTURA",
+    "HUNDE",
+    "PROGRAMMIEREN",
+    "WEIHNACHTEN",
+    "INTERNET",
+    "REGENBÖGEN",
+    "WINTER"
+  ];
 
 let currentImage = 0;
 
-let sliderImages = imageArrays[0] || [];
+let sliderImages = AllimageArray[0] || [];
 
-let siteimages = siteimg;
+let siteimages = SitePictureArray;
 
 let dialogRef = document.getElementById('myDialog');
+
 let dialogImage = document.getElementById('dialogImage');
+
+let AltTextRef = document.getElementById('imageInfo');
 
 function openDialog(i) {
   currentImage = i || 0;
@@ -241,25 +271,47 @@ function openDialog(i) {
 
 function closeDialog() {
   if (dialogRef) dialogRef.close();
+};
+
+function updateImageInfo() {
+  AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
+  dialogImage.src = sliderImages[currentImage];
+  const altInfoRef = document.getElementById('alt-info');
+  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
+};
+
+function prev() {
+  if (!sliderImages || sliderImages.length === 0) return;
+  currentImage = (currentImage - 1 + sliderImages.length) % sliderImages.length;
+  updateImageInfo();
+}
+
+function next() {
+  if (!sliderImages || sliderImages.length === 0) return;
+  currentImage = (currentImage + 1) % sliderImages.length;
+  updateImageInfo();
 }
 
 document.addEventListener('keydown', function (event) {
-  if (event.key === 'ArrowRight') {
-    document.getElementById("nextButton").click();
-  }
-  if (event.key === 'ArrowLeft') {
-    document.getElementById("prevButton").click();
+if (dialogRef.open) {
+    if (event.key === 'ArrowLeft') {
+      prev();
+    } else if (event.key === 'ArrowRight') {
+      next();
+    }
   }
 });
 
 function renderFiltered(index) {
   currentImage = 0;
 
-  if (index >= 1 && index <= imageArrays.length) {
-    sliderImages = imageArrays[index - 1];
+  if (index >= 1 && index <= AllimageArray.length) {
+    sliderImages = AllimageArray[index - 1];
     render();
   }
-  onclick=openDialog(currentImage);
+  onclick = openDialog(currentImage);
+  if (dialogRef) dialogRef.showModal();
+  updateImageInfo();
 }
 
 function render(currentSiteimages = siteimages) {
@@ -275,25 +327,6 @@ function render(currentSiteimages = siteimages) {
 function getNotesHtml(i, siteimages) {
 
   return `<div>
-              <button style='background:none;border:none;padding:0;' onclick="openDialog();renderFiltered(${i + 1});">
-                  <img src="${siteimages[i]}">
-              </button></div>`;
-};
-
-function updateImageInfo() {
-  dialogImage.src = sliderImages[currentImage];
-  const altInfoRef = document.getElementById('alt-info');
-  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
-};
-
-document.getElementById("prevButton").onclick = function () {
-  if (!sliderImages || sliderImages.length === 0) return;
-  currentImage = (currentImage - 1 + sliderImages.length) % sliderImages.length;
-  updateImageInfo();
-};
-
-document.getElementById("nextButton").onclick = function () {
-  if (!sliderImages || sliderImages.length === 0) return;
-  currentImage = (currentImage + 1) % sliderImages.length;
-  updateImageInfo();
+              <img style='background:none;border:none;padding:0;' onclick="openDialog();renderFiltered(${i + 1});"src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
+        </div>`;
 };

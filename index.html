@@ -29,8 +29,8 @@
             <a href="https://pixabay.com/service/license-summary/">
                 <img src="./logo/pixabay-2071080_640.png" alt="PixaLicense" class="pixabay_logo">
             </a>
-            <div id="imageInfo">
-                <p src=""style="color: white;"></p>
+            <div >
+                <p id="imageInfo" style="color: white;"></p>
             </div>
             <button tabindex="0" class="header_close" onclick="closeDialog()">&#10060;</button>
         </header>
@@ -40,9 +40,9 @@
             </div>
         </section>
         <footer class="dialogFoot">
-            <button tabindex="0" class="header_dia_button" id="prevButton">&#x21E6;</button>
+            <button tabindex="0" onclick="prev()">&#x21E6;</button>
             <h2 id="alt-info"></h2>
-            <button tabindex="0" class="header_dia_button" id="nextButton">&#x21E8;</button>
+            <button tabindex="0" onclick="next()">&#x21E8;</button>
         </footer>
     </dialog>
 
@@ -50,9 +50,6 @@
         <a href="https://developerakademie.com/"><img class="img_footer" src="./logo/LOGO_DA.png" alt="logofooter"></a>
         <p class="p_footer">© Copyright 2024 - Alle Rechte vorbehalten</p>
     </footer>
-
 </body>
-
 <script src="./main.js"></script>
-
 </html>

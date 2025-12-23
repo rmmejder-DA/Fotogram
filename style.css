@@ -52,7 +52,6 @@ header {
 .pixabay_logo {
   width: 120px;
   height: auto;
-  outline-offset: 0;
 
   :hover {
     cursor: pointer;
@@ -68,7 +67,7 @@ header {
 h2 {
   color: white;
   font-family: 'comic neue', sans-serif;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 h3 {
@@ -98,10 +97,25 @@ dialog::backdrop {
   opacity: 0.9;
 }
 
+dialog p {
+  font-family: 'comic neue', sans-serif;
+  font-size: 24px;
+  background: linear-gradient(to right,
+      rgb(0, 229, 61),
+      yellow);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 button:hover {
   cursor: pointer;
   opacity: 0.8;
-  color: mediumseagreen;
+  background: linear-gradient(to left,
+      rgb(0, 229, 61),
+      yellow,
+      blue);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 button:focus {
@@ -245,6 +259,10 @@ footer button {
 }
 
 @media (max-width:490px) {
+  dialog p {
+    font-size: 20px;
+  }
+
   .page-content {
     margin-top: 32px;
     height: unset;
@@ -262,6 +280,10 @@ footer button {
     margin-bottom: 24px;
   }
 
+  h2 {
+    font-size: 16px;
+  }
+
   img.LOGO {
     margin: unset;
   }
@@ -277,6 +299,10 @@ footer button {
     gap: 3px;
     padding-bottom: 10px;
   }
+
+  footer button {
+    font-size: 40px;
+  }
 }
 
 @media (max-width:415px) {
@@ -289,7 +315,11 @@ footer button {
     width: 260px;
     height: 350px;
   }
+  .pixabay_logo {
+    display: none;
+  }
 }
+
 .site_btn {
   border: none;
   background-color: transparent;
@@ -297,6 +327,7 @@ footer button {
   height: 150px;
   padding: 0;
 }
+
 .logo_container {
   width: 100%;
   max-width: 1440px;
@@ -309,7 +340,6 @@ footer button {
   height: 84px;
   box-shadow: 0px 4px 8px #000000;
 }
-
 
 .mypic {
   display: flex;
@@ -375,10 +405,10 @@ footer {
 
 .p_footer {
   display: block;
-  color: white;
+  color: #99cec8;
   font-family: 'comic neue', sans-serif;
-  font-size: 8px;
-  padding-top: 8px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .site_footer {
