@@ -1,4 +1,7 @@
+import {SitePictureArray} from "module";
 
+
+// document.images
 
 let AllimageArray = [
   CatImageArray,
@@ -25,7 +28,7 @@ let AllimageArray = [
     "PROGRAMMIEREN",
     "WEIHNACHTEN",
     "INTERNET",
-    "REGENBÖGEN",
+    "REGENBOGEN",
     "WINTER"
   ];
 
