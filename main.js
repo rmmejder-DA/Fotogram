@@ -259,6 +259,7 @@ function renderFiltered(index) {
     sliderImages = imageArrays[index - 1];
     render();
   }
+  onclick=openDialog();
 }
 
 function render(currentSiteimages = siteimages) {
@@ -271,10 +272,10 @@ function render(currentSiteimages = siteimages) {
   }
 }
 
-function getNotesHtml(i, siteimages,sliderImages) {
+function getNotesHtml(i, siteimages) {
 
   return `<div>
-              <button style='background:none;border:none;padding:0;' onclick="openDialog(${sliderImages});renderFiltered(${i + 1});">
+              <button style='background:none;border:none;padding:0;' onclick="openDialog();renderFiltered(${i + 1});">
                   <img src="${siteimages[i]}">
               </button></div>`;
 };
