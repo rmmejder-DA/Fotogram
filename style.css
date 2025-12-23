@@ -55,6 +55,7 @@ header {
   width: 120px;
   height: auto;
   outline: unset;
+  out
   :hover {
     cursor: pointer;
   }
