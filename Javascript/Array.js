@@ -1,4 +1,4 @@
-export const SitePictureArray = [
+ const SitePictureArray = [
   './image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG',
   './image/nangchen-9918045_640.jpg',
   './image/sport-4155825_1920.jpg',
@@ -13,7 +13,7 @@ export const SitePictureArray = [
   './image/christmas-wallpaper-636634_1280.jpg'
 ];
 
-export const CatImageArray = [
+ const CatImageArray = [
   './image/katzen-4604843_1280.jpg',
   './image/f07d322e-ef42-4e1e-90d5-a0a3284276a4 (2).JPG',
   './image/d2058bfe-21c4-4015-9a00-6fa02f13d25a (2).JPG',
@@ -30,7 +30,7 @@ export const CatImageArray = [
   './image/0e7d8016-9d3e-45f6-a34f-48d356fe27cc.JPG'
 ];
 
-export const NatureImageArray = [
+const NatureImageArray = [
   './image/bear-8275920_1280.jpg',
   './image/beetle-7997225_1280.jpg',
   './image/berg.jpg',
@@ -47,7 +47,7 @@ export const NatureImageArray = [
   './image/road-1072821_1280.jpg'
 ];
 
-export const SportCarImageArray = [
+const SportCarImageArray = [
   './image/car-49278_1280.jpg',
   './image/car-race-438467_1280.jpg',
   './image/car-63930_1280.jpg',
@@ -64,7 +64,7 @@ export const SportCarImageArray = [
   './image/supercar-8589586_640.png'
 ];
 
-export const AdventImageArray = [
+const AdventImageArray = [
   './image/christmas-7668272_1280.jpg',
   './image/gingerbread-7666269_1280.jpg',
   './image/star-6803666_1280.jpg',
@@ -81,7 +81,7 @@ export const AdventImageArray = [
   './image/star-514848_1280.jpg'
 ];
 
-export const EagleImageArray = [
+const EagleImageArray = [
   './image/birds-217590_1280.jpg',
   './image/eagle-1450672_1280.jpg',
   './image/eagle-1753002_1280.jpg',
@@ -99,7 +99,7 @@ export const EagleImageArray = [
   './image/eagle-8849052_1280.jpg'
 ];
 
-  export const FuerteventuraImageArray = [
+  const FuerteventuraImageArray = [
   './image/squirrel-barbary-3492406_1280.jpg',
   './image/pipit-5683656_1280.jpg',
   './image/monk-parakeet-2884519_1280.jpg',
@@ -116,7 +116,7 @@ export const EagleImageArray = [
   './image/volcano-2352450_1280.jpg'
 ];
 
-export const DogImageArray = [
+const DogImageArray = [
   './image/shepherd-dog-4357790_1280.jpg',
   './image/dogs-8613175_1280.jpg',
   './image/dogs-6463032_1280.jpg',
@@ -133,7 +133,7 @@ export const DogImageArray = [
   './image/puppy-1040951_1280.jpg'
 ];
 
-export const CodeImageArray = [
+const CodeImageArray = [
   './image/browser-773215_1280.png',
   './image/earth-2254769_1280.jpg',
   './image/tablet-5623396_1280.jpg',
@@ -150,7 +150,7 @@ export const CodeImageArray = [
   './image/web-1045994_1280.jpg'
 ];
 
-export const ChristmasImageArray = [
+const ChristmasImageArray = [
   './image/doll-figures-3015495_1280.jpg',
   './image/santa-claus-1614994_1280.png',
   './image/stollen-6848167_1280.jpg',
@@ -167,7 +167,7 @@ export const ChristmasImageArray = [
   './image/snowman-8413769_1280.jpg'
 ];
 
-export const InternetImageArray = [
+const InternetImageArray = [
   './image/code-1839406_1280.jpg',
   './image/digitization-6892337_1280.jpg',
   './image/hacker-5027679_1280.jpg',
@@ -184,7 +184,7 @@ export const InternetImageArray = [
   './image/web-3157323_1280.jpg'
 ];
 
-export const RainbowImageArray = [
+const RainbowImageArray = [
   './image/rainbow-4047523_1280.jpg',
   './image/rainbow-5324147_1280.jpg',
   './image/rainbow-7350780_1280.jpg',
@@ -201,7 +201,7 @@ export const RainbowImageArray = [
   './image/soap-bubble-3490954_1280.jpg'
 ];
 
-export const WinterImageArray = [
+const WinterImageArray = [
   './image/matterhorn-3019429_1280.jpg',
   './image/snow-7658399_1280.jpg',
   './image/village-9190397_1280.jpg',

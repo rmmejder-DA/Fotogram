@@ -1,7 +1,3 @@
-import {SitePictureArray} from "module";
-
-
-// document.images
 
 let AllimageArray = [
   CatImageArray,
@@ -15,22 +11,23 @@ let AllimageArray = [
   ChristmasImageArray,
   InternetImageArray,
   RainbowImageArray,
-  WinterImageArray];
+  WinterImageArray
+];
 
-  let imageCategories = [
-    "KATZEN",
-    "NATUR",
-    "SPORTWAGEN",
-    "ADVENT",
-    "ADLER",
-    "FUERTEVENTURA",
-    "HUNDE",
-    "PROGRAMMIEREN",
-    "WEIHNACHTEN",
-    "INTERNET",
-    "REGENBOGEN",
-    "WINTER"
-  ];
+let imageCategories = [
+  "KATZEN",
+  "NATUR",
+  "SPORTWAGEN",
+  "ADVENT",
+  "ADLER",
+  "FUERTEVENTURA",
+  "HUNDE",
+  "PROGRAMMIEREN",
+  "WEIHNACHTEN",
+  "INTERNET",
+  "REGENBOGEN",
+  "WINTER"
+];
 
 let currentImage = 0;
 
@@ -76,7 +73,7 @@ function next() {
 }
 
 document.addEventListener('keydown', function (event) {
-if (dialogRef.open) {
+  if (dialogRef.open) {
     if (event.key === 'ArrowLeft') {
       prev();
     } else if (event.key === 'ArrowRight') {
@@ -91,7 +88,7 @@ function renderFiltered(index) {
     sliderImages = AllimageArray[index - 1];
     render();
   }
-  onclick = openDialog(currentImage);
+  openDialog(currentImage);
   if (dialogRef) dialogRef.showModal();
   updateImageInfo();
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <title>Fotogram</title>
     <meta charset="UTF-8">
@@ -8,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="favicon/faviconlittle.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="Comic_Font/ComicNeue-Bold.ttf" rel="stylesheet">
+    <script src="./Javascript/Array.js"></script>
 </head>
 
 <body onload="render()">
@@ -36,7 +36,7 @@
         </header>
         <section>
             <div id="content">
-                <img class="dialogImage" id="dialogImage" src="" alt="">
+                <img loading="fast" class="dialogImage" id="dialogImage" src="" alt="">
             </div>
         </section>
         <footer class="dialogFoot">
@@ -45,12 +45,10 @@
             <button tabindex="0" onclick="next()">&#x21E8;</button>
         </footer>
     </dialog>
-
     <footer class="site_footer">
         <a href="https://developerakademie.com/"><img class="img_footer" src="./logo/LOGO_DA.png" alt="logofooter"></a>
         <p class="p_footer">© Copyright 2024 - Alle Rechte vorbehalten</p>
     </footer>
 </body>
-<script async src="./script.js"></script>
-<script type="module" src="./scriptpicture/Node.js"></script>
+<script src="./Javascript/script.js"></script>
 </html>
