@@ -54,8 +54,8 @@ header {
 .pixabay_logo {
   width: 120px;
   height: auto;
-  outline: unset;
-  out
+    overflow-clip-margin: unset;
+    overflow: unset;
   :hover {
     cursor: pointer;
   }
