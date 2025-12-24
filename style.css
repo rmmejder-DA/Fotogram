@@ -54,10 +54,10 @@ header {
 .pixabay_logo {
   width: 120px;
   height: auto;
-    overflow-clip-margin: unset;
-    overflow: unset;
+
   :hover {
     cursor: pointer;
+    opacity: 0.8;
   }
 }
 
@@ -390,7 +390,7 @@ footer button {
   cursor: pointer;
   opacity: 0.8;
   box-shadow: 0 4px 4px rgba(255, 255, 255, 0.7);
-  transform: scale(1.2);
+  transform: rotate(360deg) scale(1.2);
   transition: all 0.3s ease-in-out;
 }
 
