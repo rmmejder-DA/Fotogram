@@ -88,9 +88,9 @@ function renderFiltered(index) {
     sliderImages = AllimageArray[index - 1];
     render();
   }
-  openDialog(currentImage);
+  openDialog(sliderImages.indexOf(sliderImages[0]));
   if (dialogRef) dialogRef.showModal();
-  updateImageInfo();
+  updateImageInfo(sliderImages[0]);
 }
 
 function render(currentSiteimages = siteimages) {
@@ -103,6 +103,7 @@ function render(currentSiteimages = siteimages) {
 
 function getNotesHtml(i, siteimages) {
   return `<div>
-              <img style='background:none;border:none;padding:0;' onclick="openDialog();renderFiltered(${i + 1});"src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
+              <p style='text-align:center;margin:5px 0;font-size:16px;color:#ffff;font-family: "comic neue", sans-serif;'>${imageCategories[i]}</p>
+              <img onclick="openDialog();renderFiltered(${i + 1});"src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
         </div>`;
 };

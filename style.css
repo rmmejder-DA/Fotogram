@@ -12,8 +12,8 @@ body,
 html {
   height: 100%;
   background-color: #071820;
-  position:relative;
-  overflow-y: scroll;
+
+  overflow-y: auto;
 }
 
 *,
@@ -29,7 +29,7 @@ html {
   max-width: 1440px;
   margin: 0 auto;
   padding-inline: 10px;
-  height: 100%;
+  height: 88%;
 }
 
 .site-content {
@@ -152,20 +152,28 @@ footer button {
 /*Site*/
 @media (min-width:1450px) {
   .dialogImage {
-    width: 1100px;
-    height: 720px;
+    width: 1560px;
+    height: 920px;
   }
+
 }
 
 @media (max-width:1440px) {
+  .page-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-inline: 10px;
+    height: 80%;
+  }
 
   h1.mypic {
     font-size: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 10px;
   }
 
   .site-content {
     padding-top: unset;
+    display: contents;
   }
 
   .dialogImage {
@@ -175,6 +183,11 @@ footer button {
 }
 
 @media (max-width:1125px) {
+  .page-content {
+
+    height: 100%;
+  }
+
   h1.mypic {
     font-size: 64px;
     margin-top: 24px;
@@ -185,18 +198,6 @@ footer button {
     width: 780px;
     height: 580px;
   }
-
-  .image_grid img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .image_grid {
-    /* padding-right: 50px;
-    padding-left: 50px; */
-    gap: 24px;
-  }
-
 }
 
 @media (max-width:910px) {
@@ -319,8 +320,14 @@ footer button {
     width: 260px;
     height: 350px;
   }
+
   .pixabay_logo {
     display: none;
+  }
+
+  img.LOGO {
+    width: 200px;
+    margin-left: unset;
   }
 }
 
@@ -403,8 +410,9 @@ footer {
 }
 
 .img_footer {
-  width: 140px;
+  width: 120px;
   object-fit: contain;
+  padding-bottom: 3px;
 }
 
 .p_footer {
@@ -412,7 +420,8 @@ footer {
   color: #99cec8;
   font-family: 'comic neue', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  text-align: center;
+  line-height: 0.95;
 }
 
 .site_footer {
