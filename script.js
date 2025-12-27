@@ -102,9 +102,9 @@ function render(currentSiteimages = siteimages) {
 }
 
 function getNotesHtml(i, siteimages) {
-  return `<div>
-              <p style='text-align:center;font-size:150%;color:#ffff;font-family: "comic neue", sans-serif;line-height: 1.5;'>${imageCategories[i]}</p>
+  return `<div class="image_grid_item">
+              <p class="image_grid_item_p">${imageCategories[i]}</p>
               <img class="image_grid_img" onclick="openDialog();renderFiltered(${i + 1});"src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
         </div>`;
 };
-render();
+render('siteimages');

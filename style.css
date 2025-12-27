@@ -8,12 +8,30 @@
   margin: 0;
 }
 
-body,
+body {
+  height: 100%;
+  background-color: #071820;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 html {
   height: 100%;
   background-color: #071820;
-
   overflow-y: auto;
+}
+
+.image_grid_item_p {
+  font-size: 20px;
+  text-align: center;
+  text-align: center;
+  font-size: 150%;
+  color: #ffff;
+  font-family: "comic neue", sans-serif;
+
+  line-height: 1.5;
 }
 
 *,
@@ -23,21 +41,27 @@ html {
 }
 
 .page-content,
-.site_footer,
-.site-content,
-.header_site body {
+.site-content {
   max-width: 1440px;
   margin: 0 auto;
   padding-inline: 10px;
-  height: 88%;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  flex: 1;
 }
 
 .site-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.image_grid_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*myDialog*/
@@ -155,6 +179,7 @@ footer button {
     width: 1360px;
     height: 720px;
   }
+
   .image_grid_img {
     width: 300px;
     height: 300px;
@@ -163,13 +188,6 @@ footer button {
 
 @media (max-width:1440px) {
 
-  .page-content {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding-inline: 10px;
-    height: 80%;
-  }
-
   h1.mypic {
     font-size: 72px;
     margin-bottom: 10px;
@@ -177,7 +195,7 @@ footer button {
 
   .site-content {
     padding-top: unset;
-    display: contents;
+    padding: 16px;
   }
 
   .dialogImage {
@@ -187,8 +205,9 @@ footer button {
 }
 
 @media (max-width:1125px) {
-  .page-content {
-    height: 100%;
+  .image_grid img {
+    width: 180px;
+    height: 140px;
   }
 
   h1.mypic {
@@ -214,33 +233,25 @@ footer button {
     margin-bottom: 12px;
   }
 
-  .image_grid_img {
+  .image_grid img {
     width: 150px;
     height: 150px;
   }
 
-  .image_grid {
-    padding-right: 20px;
-    padding-left: 20px;
-    gap: 25px;
+  .image_grid_item_p {
+    font-size: 18px;
   }
 
-  .page-content {
-    margin-bottom: 12px;
-    height: unset;
+  .site_footer .img_footer {
+    width: 100px;
   }
 }
 
 @media (max-width:670px) {
-  .page-content {
-    margin-top: 24px;
-    height: unset;
-  }
 
   h1.mypic {
     font-size: 42px;
     margin-top: 24px;
-    margin-bottom: 24px;
     text-align: center;
   }
 
@@ -249,20 +260,25 @@ footer button {
     height: 350px;
   }
 
-  .site-content {
-    /* margin-top: 80px; */
-    padding: 0;
+  .page-content {
+    height: unset;
+    display: flex;
+    padding: 15px;
   }
 
-  .image_grid_img {
-    width: 124px;
-    height: 124px;
+  .image_grid img {
+    width: 118px;
+    height: 118px;
   }
 
   .image_grid {
     padding-left: unset;
     padding-right: unset;
     gap: 8px;
+  }
+
+  .image_grid_item_p {
+    font-size: 12px;
   }
 }
 
@@ -272,10 +288,12 @@ footer button {
   }
 
   .page-content {
-    margin-top: 32px;
     height: unset;
+    padding: unset;
   }
-
+  .site-content {
+    padding: unset;
+  }
   .dialogImage {
     width: 350px;
     height: 350px;
@@ -285,7 +303,6 @@ footer button {
     font-size: 32px;
     text-align: center;
     margin-top: 12px;
-    margin-bottom: 24px;
   }
 
   h2 {
@@ -302,10 +319,9 @@ footer button {
   }
 
   .image_grid {
-    padding-left: unset;
-    padding-right: unset;
-    gap: 3px;
-    padding-bottom: 10px;
+    gap: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   footer button {
@@ -313,10 +329,10 @@ footer button {
   }
 }
 
-@media (max-width:415px) {
-  .page-content {
-    margin-top: 10px;
-    height: unset;
+ @media (max-width:415px) {
+  .image_grid_item_p {
+    font-size: 16px;
+    text-align: center;
   }
 
   .dialogImage {
@@ -332,7 +348,20 @@ footer button {
     width: 200px;
     margin-left: unset;
   }
-}
+
+  .site-content {
+    flex: 1;
+    padding: 6px;
+    height: unset;
+  }
+  .image_grid_item_p {
+    font-size: 12px;
+  }
+  .image_grid img {
+    width: 100px;
+    height: 75px;
+  }
+} 
 
 .site_btn {
   border: none;
@@ -385,7 +414,7 @@ footer button {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 5px;
 }
 
 .image_grid_img {
@@ -400,7 +429,7 @@ footer button {
   cursor: pointer;
   opacity: 0.8;
   box-shadow: 0 4px 4px rgba(255, 255, 255, 0.7);
-  transform: rotate(360deg) scale(1.2);
+  transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
 
@@ -422,7 +451,7 @@ footer {
   display: block;
   color: #99cec8;
   font-family: 'comic neue', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   line-height: 0.95;
 }
@@ -434,6 +463,7 @@ footer {
   height: 84px;
   background-color: #0a222c;
   box-shadow: 0px -4px 8px #000000;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 10px;
