@@ -103,47 +103,8 @@ function render(currentSiteimages = siteimages) {
 
 function getNotesHtml(i, siteimages) {
   return `<div>
-              <p style='text-align:center;margin:5px 0;font-size:16px;color:#ffff;font-family: "comic neue", sans-serif;'>${imageCategories[i]}</p>
-              <img loading="lazy" onclick="openDialog();renderFiltered(${i + 1});"src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
+              <p style='text-align:center;font-size:150%;color:#ffff;font-family: "comic neue", sans-serif;line-height: 1.5;'>${imageCategories[i]}</p>
+              <img class="image_grid_img" onclick="openDialog();renderFiltered(${i + 1});"src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
         </div>`;
 };
-document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll("img[data-src]");
-
-  const lazyLoad = function(image) {
-    const newSrc = image.getAttribute("data-src");
-    if (!newSrc) {
-      return;
-    }
-    image.src = newSrc;
-    image.removeAttribute("data-src");
-  };
-
-  if ("IntersectionObserver" in window) {
-      const lazyObserver = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            const image = entry.target;
-            lazyLoad(image);
-            observer.unobserve(image);
-          }
-        });
-      });
-
-      images.forEach(function(image) {
-        lazyObserver.observe(image);
-      });
-  } else {
-      // Fallback using event handlers
-      const onScroll = function() {
-        images.forEach(function(image) {
-          if (image.getBoundingClientRect().top <= window.innerHeight && !image.getAttribute("src")) {
-            lazyLoad(image);
-          }
-        });
-      };
-      window.addEventListener("scroll", onScroll);
-      window.addEventListener("resize", onScroll);
-      document.addEventListener("DOMContentLoaded", onScroll);
-  }
-});
+render();

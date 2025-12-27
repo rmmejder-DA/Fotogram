@@ -155,10 +155,14 @@ footer button {
     width: 1360px;
     height: 720px;
   }
-
+  .image_grid_img {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 @media (max-width:1440px) {
+
   .page-content {
     max-width: 1440px;
     margin: 0 auto;
@@ -167,7 +171,7 @@ footer button {
   }
 
   h1.mypic {
-    font-size: 80px;
+    font-size: 72px;
     margin-bottom: 10px;
   }
 
@@ -184,14 +188,13 @@ footer button {
 
 @media (max-width:1125px) {
   .page-content {
-
     height: 100%;
   }
 
   h1.mypic {
     font-size: 64px;
     margin-top: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
   }
 
   .dialogImage {
@@ -208,10 +211,10 @@ footer button {
 
   h1.mypic {
     font-size: 48px;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
   }
 
-  .image_grid img {
+  .image_grid_img {
     width: 150px;
     height: 150px;
   }
@@ -251,7 +254,7 @@ footer button {
     padding: 0;
   }
 
-  .image_grid img {
+  .image_grid_img {
     width: 124px;
     height: 124px;
   }
@@ -355,7 +358,7 @@ footer button {
 .mypic {
   display: flex;
   justify-content: center;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   font-family: 'comic neue', sans-serif;
   font-size: 80px;
   font-weight: 400;
@@ -385,7 +388,7 @@ footer button {
   gap: 15px;
 }
 
-.image_grid img {
+.image_grid_img {
   border-radius: 25px;
   width: 200px;
   height: 200px;
@@ -393,7 +396,7 @@ footer button {
   object-fit: cover;
 }
 
-.image_grid img:hover {
+.image_grid_img:hover {
   cursor: pointer;
   opacity: 0.8;
   box-shadow: 0 4px 4px rgba(255, 255, 255, 0.7);
