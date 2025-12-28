@@ -53,18 +53,18 @@ function renderFiltered(index) {
   currentImage = 0;
   if (index >= 1 && index <= AllimageArray.length) {
     sliderImages = AllimageArray[index - 1];
-    render();
+  } else {
+    sliderImages = [];
   }
-  openDialog(sliderImages.indexOf(sliderImages[0]));
-  if (dialogRef) dialogRef.showModal();
-  updateImageInfo(sliderImages[0]);
+  openDialog(0);
+  updateImageInfo();
 }
 
 function getNotesHtml(i, siteimages) {
   return `<div class="image_grid_item">
               <p class="image_grid_item_p">${imageCategories[i]}</p>
-              <button style="background-color: transparent;border-radius: 25px; border:none; padding:0;" class="filter_button" onclick="renderFiltered(${i + 1});">
-              <img class="image_grid_img" onclick="openDialog()"src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
+              <button style="background-color: transparent;border-radius: 25px; border:none; padding:0;" onclick="renderFiltered(${i + 1},openDialog(0));">
+              <img class="image_grid_img" src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
               </button>
         </div>`;
 };
