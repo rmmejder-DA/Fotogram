@@ -53,6 +53,8 @@ function renderFiltered(index) {
 }
 
 function updateImageInfo() {
+  if (!sliderImages || sliderImages.length === 0) return;
+  else openDialog();
   AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
   dialogImage.src = sliderImages[currentImage];
   const altInfoRef = document.getElementById('alt-info');
@@ -106,5 +108,4 @@ function openDialog(i) {
 function closeDialog() {
   if (dialogRef) dialogRef.close();
 };
-
 render();
