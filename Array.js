@@ -95,7 +95,7 @@ const EagleImageArray = [
   './image/bird-6342958_1280.jpg',
   './image/eagle-5822300_1280.jpg',
   './image/eagle-5822303_1280.jpg',
-  './image/eagle-6239046_1280.jpg',
+  './image/eagle-6239046_1280.jpg'
 ];
 
   const FuerteventuraImageArray = [

@@ -41,47 +41,6 @@ let dialogImage = document.getElementById('dialogImage');
 
 let AltTextRef = document.getElementById('imageInfo');
 
-function openDialog(i) {
-  currentImage = i || 0;
-  dialogImage.src = sliderImages[currentImage];
-  if (dialogRef) dialogRef.showModal();
-  const altInfoRef = document.getElementById('alt-info');
-  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
-}
-
-function closeDialog() {
-  if (dialogRef) dialogRef.close();
-};
-
-function updateImageInfo() {
-  AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
-  dialogImage.src = sliderImages[currentImage];
-  const altInfoRef = document.getElementById('alt-info');
-  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
-};
-
-function prev() {
-  if (!sliderImages || sliderImages.length === 0) return;
-  currentImage = (currentImage - 1 + sliderImages.length) % sliderImages.length;
-  updateImageInfo();
-}
-
-function next() {
-  if (!sliderImages || sliderImages.length === 0) return;
-  currentImage = (currentImage + 1) % sliderImages.length;
-  updateImageInfo();
-}
-
-document.addEventListener('keydown', function (event) {
-  if (dialogRef.open) {
-    if (event.key === 'ArrowLeft') {
-      prev();
-    } else if (event.key === 'ArrowRight') {
-      next();
-    }
-  }
-});
-
 function renderFiltered(index) {
   currentImage = 0;
   if (index >= 1 && index <= AllimageArray.length) {
@@ -92,6 +51,13 @@ function renderFiltered(index) {
   if (dialogRef) dialogRef.showModal();
   updateImageInfo(sliderImages[0]);
 }
+
+function updateImageInfo() {
+  AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
+  dialogImage.src = sliderImages[currentImage];
+  const altInfoRef = document.getElementById('alt-info');
+  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
+};
 
 function render(currentSiteimages = siteimages) {
   let SiteimgRef = document.getElementById('contentimg');
@@ -107,4 +73,38 @@ function getNotesHtml(i, siteimages) {
               <img class="image_grid_img" onclick="openDialog();renderFiltered(${i + 1});"src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
         </div>`;
 };
-render(siteimages[0]);
+document.addEventListener('keydown', function (event) {
+  if (dialogRef.open) {
+    if (event.key === 'ArrowLeft') {
+      prev();
+    } else if (event.key === 'ArrowRight') {
+      next();
+    }
+  }
+});
+
+function prev() {
+  if (!sliderImages || sliderImages.length === 0) return;
+  currentImage = (currentImage - 1 + sliderImages.length) % sliderImages.length;
+  updateImageInfo();
+}
+
+function next() {
+  if (!sliderImages || sliderImages.length === 0) return;
+  currentImage = (currentImage + 1) % sliderImages.length;
+  updateImageInfo();
+}
+
+function openDialog(i) {
+  currentImage = i || 0;
+  dialogImage.src = sliderImages[currentImage];
+  if (dialogRef) dialogRef.showModal();
+  const altInfoRef = document.getElementById('alt-info');
+  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
+}
+
+function closeDialog() {
+  if (dialogRef) dialogRef.close();
+};
+
+render();
