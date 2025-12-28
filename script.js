@@ -107,4 +107,4 @@ function getNotesHtml(i, siteimages) {
               <img class="image_grid_img" onclick="openDialog();renderFiltered(${i + 1});"src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
         </div>`;
 };
-render('siteimages');
+render(siteimages[0]);

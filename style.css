@@ -197,7 +197,10 @@ footer button {
     padding-top: unset;
     padding: 16px;
   }
-
+  .image_grid img {
+    width: 200px;
+    height: 180px;
+  }
   .dialogImage {
     width: 1000px;
     height: 660px;
