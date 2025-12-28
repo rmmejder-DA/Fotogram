@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <title>Fotogram</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon/faviconlittle.png">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="Comic_Font/ComicNeue-Bold.ttf" rel="stylesheet">
     <script src="./Array.js"></script>
+    <title>Fotogram</title>
 </head>
+
 <body onload="render()">
     <header class="header_site">
         <div class="logo_container">
@@ -28,14 +29,14 @@
             <a href="https://pixabay.com/service/license-summary/">
                 <img src="./logo/pixabay-2071080_640.png" alt="PixaLicense" class="pixabay_logo">
             </a>
-            <div >
+            <div>
                 <p id="imageInfo" style="color: white;"></p>
             </div>
             <button tabindex="0" class="header_close" onclick="closeDialog()">&#10060;</button>
         </header>
         <section>
             <div id="content">
-                <img loading="eager" class="dialogImage" id="dialogImage" src="" alt="">
+                <img class="dialogImage" id="dialogImage" src="" alt="">
             </div>
         </section>
         <footer class="dialogFoot">
@@ -50,4 +51,5 @@
     </footer>
 </body>
 <script src="./script.js"></script>
+
 </html>
