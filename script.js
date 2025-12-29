@@ -53,9 +53,7 @@ function renderFiltered(index) {
   currentImage = 0;
   if (index >= 1 && index <= AllimageArray.length) {
     sliderImages = AllimageArray[index - 1];
-  } else {
-    sliderImages = [];
-  }
+  } 
   openDialog(0);
   updateImageInfo();
 }
@@ -63,7 +61,7 @@ function renderFiltered(index) {
 function getNotesHtml(i, siteimages) {
   return `<div class="image_grid_item">
               <p class="image_grid_item_p">${imageCategories[i]}</p>
-              <button style="background-color: transparent;border-radius: 25px; border:none; padding:0;" onclick="renderFiltered(${i + 1},openDialog());">
+              <button style="background-color: transparent;border-radius: 25px; border:none; padding:0;" onclick="renderFiltered(${i + 1}); openDialog(0);">
               <img class="image_grid_img" src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
               </button>
         </div>`;
