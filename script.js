@@ -54,14 +54,14 @@ function renderFiltered(index) {
   if (index >= 1 && index <= AllimageArray.length) {
     sliderImages = AllimageArray[index - 1];
   } 
+    updateImageInfo(0);
   openDialog(0);
-  updateImageInfo();
 }
 
 function getNotesHtml(i, siteimages) {
   return `<div class="image_grid_item">
               <p class="image_grid_item_p">${imageCategories[i]}</p>
-              <button style="background-color: transparent;border-radius: 25px; border:none; padding:0;" onclick="openDialog(renderFiltered(${i + 1}));">
+              <button style="background-color: transparent;border-radius: 25px; border:none; padding:0;" onclick="renderFiltered(${i + 1}); openDialog(0);">
               <img class="image_grid_img" src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
               </button>
         </div>`;
