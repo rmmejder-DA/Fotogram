@@ -54,8 +54,6 @@ function renderFiltered(index) {
   if (index >= 1 && index <= AllimageArray.length) {
     sliderImages = AllimageArray[index - 1];
   } 
-    updateImageInfo(0);
-  openDialog(0);
 }
 
 function getNotesHtml(i, siteimages) {
@@ -73,6 +71,7 @@ function openDialog(i) {
   if (dialogRef) dialogRef.showModal();
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
+  updateImageInfo(AllimageArray[i - 1]);
 }
 
 function prev() {
@@ -106,4 +105,3 @@ function updateImageInfo() {
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
 };
-render();

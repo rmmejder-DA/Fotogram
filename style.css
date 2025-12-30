@@ -114,7 +114,6 @@ h3 {
   width: 1000px;
   height: 720px;
   object-fit: cover;
-  object-position: center;
   transition: transform 0.3s ease-in-out;
 }
 
