@@ -1,5 +1,5 @@
  const SitePictureArray = [
-  './image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG',
+  './image/katzen-4604843_1280.jpg',
   './image/nangchen-9918045_640.jpg',
   './image/sport-4155825_1920.jpg',
   './image/advent-1883840_1280.jpg',
@@ -14,20 +14,20 @@
 ];
 
  const CatImageArray = [
-  './image/katzen-4604843_1280.jpg',
-  './image/f07d322e-ef42-4e1e-90d5-a0a3284276a4 (2).JPG',
-  './image/d2058bfe-21c4-4015-9a00-6fa02f13d25a (2).JPG',
-  './image/d998f545-75d8-4822-bd76-41692cf74776 (2).JPG',
-  './image/cat-8612685_1280.jpg',
-  './image/bd374f12-c955-4e1b-9368-1f532babfa2c 1.JPG',
-  './image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).JPG',
-  './image/447afcc7-44a2-4916-87af-8297d2ac1c5b (2).JPG',
-  './image/66f1dc84-6c22-41db-9c4d-9a0d9407fbc6.JPG',
-  './image/6b8b4db4-7d47-4fb9-a581-ac9946f7a03c.JPG',
-  './image/5cd269ac-a0ee-439f-98c6-83978e743318 (2).JPG',
-  './image/5b6371e7-0edd-413b-961b-37198bb9be33 (2).JPG',
-  './image/2b561ab7-4458-4082-855f-98fdc5f66ebf (2).JPG',
-  './image/0e7d8016-9d3e-45f6-a34f-48d356fe27cc.JPG'
+'./image/d998f545-75d8-4822-bd76-41692cf74776 (2).JPG',
+ './image/d2058bfe-21c4-4015-9a00-6fa02f13d25a (2).JPG', 
+ './image/f07d322e-ef42-4e1e-90d5-a0a3284276a4 (2).JPG', 
+ './image/katzen-4604843_1280.jpg', 
+ './image/0e7d8016-9d3e-45f6-a34f-48d356fe27cc.jpg', 
+ './image/2b561ab7-4458-4082-855f-98fdc5f66ebf (2).jpg', 
+ './image/5b6371e7-0edd-413b-961b-37198bb9be33 (2).jpg', 
+ './image/5cd269ac-a0ee-439f-98c6-83978e743318 (2).jpg', 
+ './image/6b8b4db4-7d47-4fb9-a581-ac9946f7a03c.jpg', 
+ './image/66f1dc84-6c22-41db-9c4d-9a0d9407fbc6.jpg', 
+ './image/447afcc7-44a2-4916-87af-8297d2ac1c5b (2).jpg', 
+ './image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).jpg', 
+ './image/bd374f12-c955-4e1b-9368-1f532babfa2c 1.jpg', 
+ './image/cat-8612685_1280.jpg'
 ];
 
 const NatureImageArray = [

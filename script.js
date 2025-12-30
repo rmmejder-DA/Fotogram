@@ -29,11 +29,13 @@ let imageCategories = [
   "WINTER"
 ];
 
+let siteimages = SitePictureArray;
+
 let currentImage = 0;
 
 let sliderImages = AllimageArray[0] || [];
 
-let siteimages = SitePictureArray;
+let SiteimgRef = document.getElementById('contentimg');
 
 let dialogRef = document.getElementById('myDialog');
 
@@ -42,39 +44,49 @@ let dialogImage = document.getElementById('dialogImage');
 let AltTextRef = document.getElementById('imageInfo');
 
 function render(currentSiteimages = siteimages) {
-  let SiteimgRef = document.getElementById('contentimg');
   SiteimgRef.innerHTML = '';
   for (let i = 0; i < currentSiteimages.length; i++) {
     SiteimgRef.innerHTML += getNotesHtml(i, currentSiteimages);
   }
-  updateImageInfo();
-}
-
-function renderFiltered(index) {
-  currentImage = 0;
-  if (index >= 1 && index <= AllimageArray.length) {
-    sliderImages = AllimageArray[index - 1];
-  } 
-  updateImageInfo();
-  openDialog(0);
 }
 
 function getNotesHtml(i, siteimages) {
   return `<div class="image_grid_item">
               <p class="image_grid_item_p">${imageCategories[i]}</p>
               <button style="background-color: transparent;border-radius: 25px; border:none; padding:0;" onclick="renderFiltered(${i + 1}); openDialog(0);">
-              <img class="image_grid_img" src="${siteimages[i]}" alt="${imageCategories[currentImage]}"/>
+              <img class="image_grid_img" src="${siteimages[i]}" alt="${imageCategories[i]}"/>
               </button>
         </div>`;
-};
+}
 
 function openDialog(i) {
-  currentImage = i || 0;
+  currentImage = i;
   dialogImage.src = sliderImages[currentImage];
-  if (dialogRef) dialogRef.showModal(AllimageArray[0]);
+  if (dialogRef) dialogRef.showModal();
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
+}
+
+function closeDialog() {
+  if (dialogRef) dialogRef.close();
+}
+
+function renderFiltered(index) {
+  currentImage = 0;
+  if (index >= 1 && index <= AllimageArray.length) {
+    sliderImages = AllimageArray[index - 1];
+  } else {
+    sliderImages = [];
+  }
+  openDialog(0);
   updateImageInfo();
+}
+
+function updateImageInfo() {
+  AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
+  dialogImage.src = sliderImages[currentImage];
+  const altInfoRef = document.getElementById('alt-info');
+  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
 }
 
 function prev() {
@@ -90,7 +102,7 @@ function next() {
 }
 
 document.addEventListener('keydown', function (event) {
-  if (dialogRef.open) {
+  if (dialogRef && dialogRef.open) {
     if (event.key === 'ArrowLeft') {
       prev();
     } else if (event.key === 'ArrowRight') {
@@ -98,13 +110,3 @@ document.addEventListener('keydown', function (event) {
     }
   }
 });
-function closeDialog() {
-  if (dialogRef) dialogRef.close();
-};
-
-function updateImageInfo() {
-  AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
-  dialogImage.src = sliderImages[currentImage];
-  const altInfoRef = document.getElementById('alt-info');
-  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
-};
