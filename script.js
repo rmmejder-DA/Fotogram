@@ -47,6 +47,7 @@ function render(currentSiteimages = siteimages) {
   for (let i = 0; i < currentSiteimages.length; i++) {
     SiteimgRef.innerHTML += getNotesHtml(i, currentSiteimages);
   }
+  updateImageInfo();
 }
 
 function renderFiltered(index) {
@@ -54,6 +55,8 @@ function renderFiltered(index) {
   if (index >= 1 && index <= AllimageArray.length) {
     sliderImages = AllimageArray[index - 1];
   } 
+  updateImageInfo();
+  openDialog(0);
 }
 
 function getNotesHtml(i, siteimages) {
@@ -68,10 +71,10 @@ function getNotesHtml(i, siteimages) {
 function openDialog(i) {
   currentImage = i || 0;
   dialogImage.src = sliderImages[currentImage];
-  if (dialogRef) dialogRef.showModal();
+  if (dialogRef) dialogRef.showModal(AllimageArray[0]);
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
-  updateImageInfo(AllimageArray[i - 1]);
+  updateImageInfo();
 }
 
 function prev() {

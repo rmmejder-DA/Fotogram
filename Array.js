@@ -151,7 +151,7 @@ const CodeImageArray = [
 
 const ChristmasImageArray = [
   './image/doll-figures-3015495_1280.jpg',
-  './image/istockphoto-865836056-612x612.jpg',
+  './image/santa-claus.jpg',
   './image/stollen-6848167_1280.jpg',
   './image/xmas-2703168_1280.jpg',
   './image/christmas-210289_1280.jpg',
