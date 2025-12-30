@@ -1,4 +1,4 @@
- const SitePictureArray = [
+const SitePictureArray = [
   './image/katzen-4604843_1280.jpg',
   './image/nangchen-9918045_640.jpg',
   './image/sport-4155825_1920.jpg',
@@ -13,21 +13,21 @@
   './image/christmas-wallpaper-636634_1280.jpg'
 ];
 
- const CatImageArray = [
-'./image/d998f545-75d8-4822-bd76-41692cf74776 (2).JPG',
- './image/d2058bfe-21c4-4015-9a00-6fa02f13d25a (2).JPG', 
- './image/f07d322e-ef42-4e1e-90d5-a0a3284276a4 (2).JPG', 
- './image/katzen-4604843_1280.jpg', 
- './image/0e7d8016-9d3e-45f6-a34f-48d356fe27cc.jpg', 
- './image/2b561ab7-4458-4082-855f-98fdc5f66ebf (2).jpg', 
- './image/5b6371e7-0edd-413b-961b-37198bb9be33 (2).jpg', 
- './image/5cd269ac-a0ee-439f-98c6-83978e743318 (2).jpg', 
- './image/6b8b4db4-7d47-4fb9-a581-ac9946f7a03c.jpg', 
- './image/66f1dc84-6c22-41db-9c4d-9a0d9407fbc6.jpg', 
- './image/447afcc7-44a2-4916-87af-8297d2ac1c5b (2).jpg', 
- './image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).jpg', 
- './image/bd374f12-c955-4e1b-9368-1f532babfa2c 1.jpg', 
- './image/cat-8612685_1280.jpg'
+const CatImageArray = [
+  './image/d998f545-75d8-4822-bd76-41692cf74776 (2).JPG',
+  './image/d2058bfe-21c4-4015-9a00-6fa02f13d25a (2).JPG',
+  './image/f07d322e-ef42-4e1e-90d5-a0a3284276a4 (2).JPG',
+  './image/katzen-4604843_1280.jpg',
+  './image/0e7d8016-9d3e-45f6-a34f-48d356fe27cc.jpg',
+  './image/2b561ab7-4458-4082-855f-98fdc5f66ebf (2).jpg',
+  './image/5b6371e7-0edd-413b-961b-37198bb9be33 (2).jpg',
+  './image/5cd269ac-a0ee-439f-98c6-83978e743318 (2).jpg',
+  './image/6b8b4db4-7d47-4fb9-a581-ac9946f7a03c.jpg',
+  './image/66f1dc84-6c22-41db-9c4d-9a0d9407fbc6.jpg',
+  './image/447afcc7-44a2-4916-87af-8297d2ac1c5b (2).jpg',
+  './image/03192c9a-4b0f-4372-9c87-6cec90261d2c (2).jpg',
+  './image/bd374f12-c955-4e1b-9368-1f532babfa2c 1.jpg',
+  './image/cat-8612685_1280.jpg'
 ];
 
 const NatureImageArray = [
@@ -98,7 +98,7 @@ const EagleImageArray = [
   './image/eagle-6239046_1280.jpg'
 ];
 
-  const FuerteventuraImageArray = [
+const FuerteventuraImageArray = [
   './image/squirrel-barbary-3492406_1280.jpg',
   './image/pipit-5683656_1280.jpg',
   './image/monk-parakeet-2884519_1280.jpg',
@@ -116,6 +116,9 @@ const EagleImageArray = [
 ];
 
 const DogImageArray = [
+  './image/dogs-2207923_1280.jpg',
+  './image/dogs-7248400_1280.jpg',
+  './image/great-dane-3011826_1280.jpg',
   './image/shepherd-dog-4357790_1280.jpg',
   './image/dogs-8613175_1280.jpg',
   './image/dogs-6463032_1280.jpg',
@@ -123,9 +126,6 @@ const DogImageArray = [
   './image/ai-generated-9437073_1280.png',
   './image/cute-1917049_1280.jpg',
   './image/dogs-1299485_1280.png',
-  './image/dogs-2207923_1280.jpg',
-  './image/dogs-7248400_1280.jpg',
-  './image/great-dane-3011826_1280.jpg',
   './image/kennels-for-pets-3821861_1280.jpg',
   './image/labradors-7855208_1280.jpg',
   './image/pets-962215_1280.jpg',
@@ -133,6 +133,9 @@ const DogImageArray = [
 ];
 
 const CodeImageArray = [
+  './image/eye-669157_1280.jpg',
+  './image/future-7130603_1280.jpg',
+  './image/industry-4330186_1280.jpg',
   './image/browser-773215_1280.png',
   './image/earth-2254769_1280.jpg',
   './image/tablet-5623396_1280.jpg',
@@ -140,9 +143,6 @@ const CodeImageArray = [
   './image/apple-1867762_1280.jpg',
   './image/big-895567_1280.jpg',
   './image/computer-5623398_1280.jpg',
-  './image/eye-669157_1280.jpg',
-  './image/future-7130603_1280.jpg',
-  './image/industry-4330186_1280.jpg',
   './image/internet-1020137_1280.jpg',
   './image/job-7291427_1280.png',
   './image/monkey-4042658_1280.jpg',
@@ -167,19 +167,19 @@ const ChristmasImageArray = [
 ];
 
 const InternetImageArray = [
+  './image/programmer-7633812_1280.jpg',
+  './image/technician-3652287_1280.jpg',
+  './image/javascript-736401_1280.png',
   './image/code-1839406_1280.jpg',
   './image/digitization-6892337_1280.jpg',
   './image/hacker-5027679_1280.jpg',
-  './image/javascript-736401_1280.png',
-  './image/ai-generated-8329581_1280.jpg',
-  './image/code-geek-2680204_640.png',
-  './image/developer-8829709_1280.jpg',
   './image/emoji-4826138_640.png',
   './image/factory-7281686_1280.png',
   './image/hello-world-1333103_1280.jpg',
   './image/mockup-5290462_1280.jpg',
-  './image/programmer-7633812_1280.jpg',
-  './image/technician-3652287_1280.jpg',
+  './image/ai-generated-8329581_1280.jpg',
+  './image/code-geek-2680204_640.png',
+  './image/developer-8829709_1280.jpg',
   './image/web-3157323_1280.jpg'
 ];
 

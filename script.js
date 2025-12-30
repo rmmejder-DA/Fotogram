@@ -50,25 +50,12 @@ function render(currentSiteimages = siteimages) {
   }
 }
 
-function getNotesHtml(i, siteimages) {
-  return `<div class="image_grid_item">
-              <p class="image_grid_item_p">${imageCategories[i]}</p>
-              <button style="background-color: transparent;border-radius: 25px; border:none; padding:0;" onclick="renderFiltered(${i + 1}); openDialog(0);">
-              <img class="image_grid_img" src="${siteimages[i]}" alt="${imageCategories[i]}"/>
-              </button>
-        </div>`;
-}
-
 function openDialog(i) {
   currentImage = i;
   dialogImage.src = sliderImages[currentImage];
   if (dialogRef) dialogRef.showModal();
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
-}
-
-function closeDialog() {
-  if (dialogRef) dialogRef.close();
 }
 
 function renderFiltered(index) {
@@ -78,11 +65,25 @@ function renderFiltered(index) {
   } else {
     sliderImages = [];
   }
-  openDialog(0);
-  updateImageInfo();
+    openDialog(0);
+  }
+
+function closeDialog() {
+  if (dialogRef) dialogRef.close();
+  updateImageInfo(0);
+}
+
+function getNotesHtml(i, siteimages) {
+  return `<div class="image_grid_item">
+              <p class="image_grid_item_p">${imageCategories[i]}</p>
+              <button style="background-color: transparent;border-radius: 25px; border:none; padding:0;" onclick="renderFiltered(${i + 1})">
+              <img class="image_grid_img" src="${siteimages[i]}" alt="${imageCategories[i]}"/>
+              </button>
+        </div>`;
 }
 
 function updateImageInfo() {
+  if (!sliderImages || sliderImages.length === 0) return;
   AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
   dialogImage.src = sliderImages[currentImage];
   const altInfoRef = document.getElementById('alt-info');
