@@ -64,11 +64,12 @@ function renderFiltered(index) {
   if (index >= 1 && index <= AllimageArray.length) {
     sliderImages = AllimageArray[index - 1];
   } else {
-    sliderImages = AllimageArray[0];
+    sliderImages = [];
   }
-  openDialog(currentImage);
+  openDialog(0);
   updateImageInfo();
 }
+
 function updateImageInfo() {
   dialogImage.src = sliderImages[currentImage];
   AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
