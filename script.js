@@ -48,6 +48,7 @@ function openDialog(i) {
   dialogImage.src = '';
   dialogImage.src = sliderImages[currentImage];
   if (dialogRef) dialogRef.showModal();
+  AltTextRef.textContent = `${imageCategories[currentCategory]}`;
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
 }
