@@ -43,19 +43,20 @@ let dialogImage = document.getElementById('dialogImage');
 
 let AltTextRef = document.getElementById('imageInfo');
 
+function openDialog(i) {
+  currentImage = i;
+  dialogImage.src = '';
+  dialogImage.src = sliderImages[currentImage];
+  if (dialogRef) dialogRef.showModal();
+  const altInfoRef = document.getElementById('alt-info');
+  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
+}
+
 function render(currentSiteimages = siteimages) {
   SiteimgRef.innerHTML = '';
   for (let i = 0; i < currentSiteimages.length; i++) {
     SiteimgRef.innerHTML += getNotesHtml(i, currentSiteimages);
   }
-}
-
-function openDialog(i) {
-  currentImage = i;
-  dialogImage.src = sliderImages[currentImage];
-  if (dialogRef) dialogRef.showModal();
-  const altInfoRef = document.getElementById('alt-info');
-  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
 }
 
 function renderFiltered(index) {
@@ -65,12 +66,8 @@ function renderFiltered(index) {
   } else {
     sliderImages = [];
   }
-    openDialog(0);
-  }
-
-function closeDialog() {
-  if (dialogRef) dialogRef.close();
-  updateImageInfo(0);
+  render();
+  openDialog(currentImage);
 }
 
 function getNotesHtml(i, siteimages) {
@@ -83,8 +80,8 @@ function getNotesHtml(i, siteimages) {
 }
 
 function updateImageInfo() {
-  AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
   dialogImage.src = sliderImages[currentImage];
+  AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
 }
@@ -110,3 +107,7 @@ document.addEventListener('keydown', function (event) {
     }
   }
 });
+
+function closeDialog() {
+  if (dialogRef) dialogRef.close();
+}
