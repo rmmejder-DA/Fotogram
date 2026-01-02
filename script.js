@@ -59,8 +59,11 @@ function render(currentSiteimages = siteimages) {
   }
 }
 
+let currentCategory = 0;
+
 function renderFiltered(index) {
   currentImage = 0;
+  currentCategory = index - 1;
   if (index >= 1 && index <= AllimageArray.length) {
     sliderImages = AllimageArray[index - 1];
   } else {
@@ -81,7 +84,7 @@ function getNotesHtml(i, siteimages) {
 
 function updateImageInfo() {
   dialogImage.src = sliderImages[currentImage];
-  AltTextRef.textContent = `${imageCategories[AllimageArray.indexOf(sliderImages)]}`;
+  AltTextRef.textContent = `${imageCategories[currentCategory]}`;
   const altInfoRef = document.getElementById('alt-info');
   altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
 }
