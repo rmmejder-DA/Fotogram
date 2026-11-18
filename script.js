@@ -44,13 +44,16 @@ let dialogImage = document.getElementById('dialogImage');
 let AltTextRef = document.getElementById('imageInfo');
 
 function openDialog(i) {
-  currentImage = i;
-  dialogImage.src = '';
-  dialogImage.src = sliderImages[currentImage];
-  if (dialogRef) dialogRef.showModal();
-  AltTextRef.textContent = `${imageCategories[currentCategory]}`;
-  const altInfoRef = document.getElementById('alt-info');
-  altInfoRef.textContent = `${currentImage + 1} / ${sliderImages.length}`;
+    currentImage = i;
+
+    dialogImage.style.opacity = "0";
+
+    dialogImage.onload = () => {
+        dialogImage.style.opacity = "1";
+        dialogRef.showModal();
+    };
+
+    dialogImage.src = sliderImages[currentImage];
 }
 
 function render(currentSiteimages = siteimages) {
