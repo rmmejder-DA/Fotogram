@@ -78,7 +78,7 @@ function getNotesHtml(i, siteimages) {
   return `<div class="image_grid_item">
               <p class="image_grid_item_p">${imageCategories[i]}</p>
               <button style="background-color: transparent;border-radius: 25px; border:none; padding:0;" onclick="renderFiltered(${i + 1})">
-              <img loading="lazy" class="image_grid_img" src="${siteimages[i]}" alt="${imageCategories[i]}"/>
+              <img class="image_grid_img" src="${siteimages[i]}" alt="${imageCategories[i]}"/>
               </button>
         </div>`;
 }
